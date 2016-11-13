@@ -1,0 +1,1649 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FixprivPolicies xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <rules>
+
+    <!-- REG_DWORD,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\AppHost,EnableWebContentEvaluation,0 -->
+
+    <FixprivPolicy id="0">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppHost">
+       <keyValue>
+         <valueName>EnableWebContentEvaluation</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>Smartscreen Filter</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,HKCU,Control Panel\International\User Profile,HttpAcceptLanguageOptOut,1 -->
+
+    <FixprivPolicy id="1">
+      <key keyRoot="HKCU" keyName="Control Panel\\International\\User Profile">
+       <keyValue>
+         <valueName>HttpAcceptLanguageOptOut</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>Let websites provide locally relevant content by accessing my language list</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_SZ,HKCU,SOFTWARE\Microsoft\Internet Explorer\International,AcceptLanguage, -->
+
+    <FixprivPolicy id="2">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Internet Explorer\\International">
+       <keyValue>
+         <valueName>AcceptLanguage</valueName>
+          <valueType>REG_SZ</valueType>
+          <valueMode>POL_WSTRING</valueMode>
+          <valueDescription>Let websites provide locally relevant content by accessing my language list</valueDescription>
+          <valueData></valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_SZ,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\DeviceAccess\Global\{E6AD100E-5F4E-44CD-BE0F-2265D88D14F5},Value,Deny -->
+
+    <FixprivPolicy id="3">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\DeviceAccess\\Global\\{E6AD100E-5F4E-44CD-BE0F-2265D88D14F5}">
+       <keyValue>
+         <valueName>Value</valueName>
+          <valueType>REG_SZ</valueType>
+          <valueMode>POL_WSTRING</valueMode>
+          <valueDescription>Let apps access/control my location info</valueDescription>
+          <valueData>Deny</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_SZ,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\DeviceAccess\Global\{52079E78-A92B-413F-B213-E8FE35712E72},Value,Deny -->
+
+    <FixprivPolicy id="4">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\DeviceAccess\\Global\\{52079E78-A92B-413F-B213-E8FE35712E72}">
+       <keyValue>
+         <valueName>Value</valueName>
+          <valueType>REG_SZ</valueType>
+          <valueMode>POL_WSTRING</valueMode>
+          <valueDescription>Let apps access my notifications</valueDescription>
+          <valueData>Deny</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,HKCU,SOFTWARE\Microsoft\Personalization\Settings,AcceptedPrivacyPolicy,0 -->
+
+    <FixprivPolicy id="5">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Personalization\\Settings">
+       <keyValue>
+         <valueName>AcceptedPrivacyPolicy</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>Get to know my typing</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\SettingSync\Groups\Language,Enabled,0 -->
+
+    <FixprivPolicy id="6">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\SettingSync\\Groups\\Language">
+       <keyValue>
+         <valueName>Enabled</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>Turn On or Off Your Individual Sync Settings</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,HKCU,SOFTWARE\Microsoft\InputPersonalization,RestrictImplicitTextCollection,1 -->
+
+    <FixprivPolicy id="7">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\InputPersonalization">
+       <keyValue>
+         <valueName>RestrictImplicitTextCollection</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>Turn off automatic learning. This policy setting turns off the automatic learning component of handwriting recognition personalization. Automatic learning enables the collection and storage of text and ink written by the user in order to help adapt handwriting recognition to the vocabulary and handwriting style of the user.</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,HKCU,SOFTWARE\Microsoft\InputPersonalization,RestrictImplicitInkCollection,1 -->
+
+    <FixprivPolicy id="8">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\InputPersonalization">
+       <keyValue>
+         <valueName>RestrictImplicitInkCollection</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>Turn off automatic learning. This policy setting turns off the automatic learning component of handwriting recognition personalization. Automatic learning enables the collection and storage of text and ink written by the user in order to help adapt handwriting recognition to the vocabulary and handwriting style of the user.</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,HKCU,SOFTWARE\Microsoft\InputPersonalization\TrainedDataStore,HarvestContacts,0 -->
+
+    <FixprivPolicy id="9">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\InputPersonalization\\TrainedDataStore">
+       <keyValue>
+         <valueName>HarvestContacts</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>Do not allow Microsoft to harvest contacts.</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_SZ,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\Search,CortanaMUID,MUID=bc6c9f905afb4a01a748197238147f73 -->
+
+    <FixprivPolicy id="10">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Search">
+       <keyValue>
+         <valueName>CortanaMUID</valueName>
+          <valueType>REG_SZ</valueType>
+          <valueMode>POL_DELETE</valueMode>
+          <valueDescription>CortanaMUID</valueDescription>
+          <valueData>MUID=bc6c9f905afb4a01a748197238147f73</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_SZ,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\DeviceAccess\Global\{C1D23ACC-752B-43E5-8448-8D0E519CD6D6},Value,Deny -->
+
+    <FixprivPolicy id="11">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\DeviceAccess\\Global\\{C1D23ACC-752B-43E5-8448-8D0E519CD6D6}">
+       <keyValue>
+         <valueName>Value</valueName>
+          <valueType>REG_SZ</valueType>
+          <valueMode>POL_WSTRING</valueMode>
+          <valueDescription>Let apps access my name, picture and other account info.</valueDescription>
+          <valueData>Deny</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_SZ,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\DeviceAccess\S-1-15-2-1239072475-3687740317-1842961305-3395936705-4023953123-1525404051-2779347315\{7D7E8402-7C54-4821-A34E-AEEFD62DED93},Value,Deny -->
+
+    <FixprivPolicy id="12">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\DeviceAccess\\S-1-15-2-1239072475-3687740317-1842961305-3395936705-4023953123-1525404051-2779347315\\{7D7E8402-7C54-4821-A34E-AEEFD62DED93}">
+       <keyValue>
+         <valueName>Value</valueName>
+          <valueType>REG_SZ</valueType>
+          <valueMode>POL_WSTRING</valueMode>
+          <valueDescription>Let apps access my contacts.</valueDescription>
+          <valueData>Deny</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_SZ,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\DeviceAccess\S-1-15-2-1063257880-1914585122-1954150059-946145533-116938067-416079064-1690466945\{7D7E8402-7C54-4821-A34E-AEEFD62DED93},Value,Deny -->
+
+    <FixprivPolicy id="13">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\DeviceAccess\\S-1-15-2-1063257880-1914585122-1954150059-946145533-116938067-416079064-1690466945\\{7D7E8402-7C54-4821-A34E-AEEFD62DED93}">
+       <keyValue>
+         <valueName>Value</valueName>
+          <valueType>REG_SZ</valueType>
+          <valueMode>POL_WSTRING</valueMode>
+          <valueDescription>Let apps access my contacts.</valueDescription>
+          <valueData>Deny</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_SZ,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\DeviceAccess\Global\{D89823BA-7180-4B81-B50C-7E471E6121A3},Value,Deny -->
+
+    <FixprivPolicy id="14">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\DeviceAccess\\Global\\{D89823BA-7180-4B81-B50C-7E471E6121A3}">
+       <keyValue>
+         <valueName>Value</valueName>
+          <valueType>REG_SZ</valueType>
+          <valueMode>POL_WSTRING</valueMode>
+          <valueDescription>Let apps access my calendar.</valueDescription>
+          <valueData>Deny</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_SZ,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\DeviceAccess\Global\{8BC668CF-7728-45BD-93F8-CF2B3B41D7AB},Value,Deny -->
+
+    <FixprivPolicy id="15">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\DeviceAccess\\Global\\{8BC668CF-7728-45BD-93F8-CF2B3B41D7AB}">
+       <keyValue>
+         <valueName>Value</valueName>
+          <valueType>REG_SZ</valueType>
+          <valueMode>POL_WSTRING</valueMode>
+          <valueDescription>Let apps access my call history.</valueDescription>
+          <valueData>Deny</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_SZ,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\DeviceAccess\Global\{9231CB4C-BF57-4AF3-8C55-FDA7BFCC04C5},Value,Deny -->
+
+    <FixprivPolicy id="16">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\DeviceAccess\\Global\\{9231CB4C-BF57-4AF3-8C55-FDA7BFCC04C5}">
+       <keyValue>
+         <valueName>Value</valueName>
+          <valueType>REG_SZ</valueType>
+          <valueMode>POL_WSTRING</valueMode>
+          <valueDescription>Let apps access and send email.</valueDescription>
+          <valueData>Deny</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_SZ,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\DeviceAccess\Global\{992AFA70-6F47-4148-B3E9-3003349C1548},Value,Deny -->
+
+    <FixprivPolicy id="17">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\DeviceAccess\\Global\\{992AFA70-6F47-4148-B3E9-3003349C1548}">
+       <keyValue>
+         <valueName>Value</valueName>
+          <valueType>REG_SZ</valueType>
+          <valueMode>POL_WSTRING</valueMode>
+          <valueDescription>Let apps read or send messages (text or MMS).</valueDescription>
+          <valueData>Deny</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_SZ,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\DeviceAccess\Global\{21157C1F-2651-4CC1-90CA-1F28B02263F6},Value,Deny -->
+
+    <FixprivPolicy id="18">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\DeviceAccess\\Global\\{21157C1F-2651-4CC1-90CA-1F28B02263F6}">
+       <keyValue>
+         <valueName>Value</valueName>
+          <valueType>REG_SZ</valueType>
+          <valueMode>POL_WSTRING</valueMode>
+          <valueDescription>Let apps read or send messages (text or MMS).</valueDescription>
+          <valueData>Deny</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_SZ,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\DeviceAccess\Global\{A8804298-2D5F-42E3-9531-9C8C39EB29CE},Value,Deny -->
+
+    <FixprivPolicy id="19">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\DeviceAccess\\Global\\{A8804298-2D5F-42E3-9531-9C8C39EB29CE}">
+       <keyValue>
+         <valueName>Value</valueName>
+          <valueType>REG_SZ</valueType>
+          <valueMode>POL_WSTRING</valueMode>
+          <valueDescription>Let apps control radios.</valueDescription>
+          <valueData>Deny</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_SZ,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\DeviceAccess\Global\{BFA794E4-F964-4FDB-90F6-51056BFE4B44},Value,Deny -->
+
+    <FixprivPolicy id="20">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\DeviceAccess\\Global\\{BFA794E4-F964-4FDB-90F6-51056BFE4B44}">
+       <keyValue>
+         <valueName>Value</valueName>
+          <valueType>REG_SZ</valueType>
+          <valueMode>POL_WSTRING</valueMode>
+          <valueDescription>Enable/Disable Location.</valueDescription>
+          <valueData>Deny</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_SZ,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\DeviceAccess\Global\{E5323777-F976-4f5b-9B55-B94699C46E44},Value,Deny -->
+
+    <FixprivPolicy id="21">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\DeviceAccess\\Global\\{E5323777-F976-4f5b-9B55-B94699C46E44}">
+       <keyValue>
+         <valueName>Value</valueName>
+          <valueType>REG_SZ</valueType>
+          <valueMode>POL_WSTRING</valueMode>
+          <valueDescription>Let apps access/control my camera.</valueDescription>
+          <valueData>Deny</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_SZ,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\DeviceAccess\Global\{2EEF81BE-33FA-4800-9670-1CD474972C3F},Value,Deny -->
+
+    <FixprivPolicy id="22">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\DeviceAccess\\Global\\{2EEF81BE-33FA-4800-9670-1CD474972C3F}">
+       <keyValue>
+         <valueName>Value</valueName>
+          <valueType>REG_SZ</valueType>
+          <valueMode>POL_WSTRING</valueMode>
+          <valueDescription>Let apps access/control my microphone.</valueDescription>
+          <valueData>Deny</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <FixprivPolicy id="23">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\SettingSync\\Groups\\Accessibility">
+       <keyValue>
+         <valueName>Enabled</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>Turn On or Off Individual Sync Settings</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <FixprivPolicy id="24">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\SettingSync\\Groups\\AppSync">
+       <keyValue>
+         <valueName>Enabled</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>Turn On or Off Individual Sync Settings</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <FixprivPolicy id="25">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\SettingSync\\Groups\\BrowserSettings">
+       <keyValue>
+         <valueName>Enabled</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>Turn On or Off Individual Sync Settings</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <FixprivPolicy id="26">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\SettingSync\\Groups\\Credentials">
+       <keyValue>
+         <valueName>Enabled</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>Turn On or Off Individual Sync Settings</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <FixprivPolicy id="27">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\SettingSync\\Groups\\DesktopTheme">
+       <keyValue>
+         <valueName>Enabled</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>Turn On or Off Individual Sync Settings</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <FixprivPolicy id="28">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\SettingSync\\Groups\\PackageState">
+       <keyValue>
+         <valueName>Enabled</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>Turn On or Off Individual Sync Settings</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <FixprivPolicy id="29">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\SettingSync\\Groups\\Personalization">
+       <keyValue>
+         <valueName>Enabled</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>Turn On or Off Individual Sync Settings</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <FixprivPolicy id="30">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\SettingSync\\Groups\\StartLayout">
+       <keyValue>
+         <valueName>Enabled</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>Turn On or Off Individual Sync Settings</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <FixprivPolicy id="31">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\SettingSync\\Groups\\Windows">
+       <keyValue>
+         <valueName>Enabled</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>Turn On or Off Individual Sync Settings</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+ 
+    <FixprivPolicy id="34">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AdvertisingInfo">
+       <keyValue>
+         <valueName>Enabled</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>Turn off the advertising ID.</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_SZ,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\AdvertisingInfo,Id,Noooooo! -->
+
+    <FixprivPolicy id="35">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AdvertisingInfo">
+       <keyValue>
+         <valueName>Id</valueName>
+          <valueType>REG_SZ</valueType>
+          <valueMode>POL_WSTRING</valueMode>
+          <valueDescription>Set advertising ID value.</valueDescription>
+          <valueData>Noooooo!</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System,DisableShutdownNamedPipe,1 -->
+
+    <FixprivPolicy id="36">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System">
+       <keyValue>
+         <valueName>DisableShutdownNamedPipe</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>Turn off legacy remote shutdown interface.</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\FVE,UseAdvancedStartup,1 -->
+
+    <FixprivPolicy id="37">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\FVE">
+       <keyValue>
+         <valueName>UseAdvancedStartup</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>This policy setting allows you to configure whether BitLocker requires additional authentication each time the computer starts and whether you are using BitLocker with or without a Trusted Platform Module (TPM). This policy setting is applied when you turn on BitLocker.  Note: Only one of the additional authentication options can be required at startup, otherwise a policy error occurs.  If you want to use BitLocker on a computer without a TPM, select the "Allow BitLocker without a compatible TPM" check box. In this mode either a password or a USB drive is required for start-up. When using a startup key, the key information used to encrypt the drive is stored on the USB drive, creating a USB key. When the USB key is inserted the access to the drive is authenticated and the drive is accessible. If the USB key is lost or unavailable or if you have forgotten the password then you will need to use one of the BitLocker recovery options to access the drive.  On a computer with a compatible TPM, four types of authentication methods can be used at startup to provide added protection for encrypted data. When the computer starts, it can use only the TPM for authentication, or it can also require insertion of a USB flash drive containing a startup key, the entry of a 4-digit to 20-digit personal identification number (PIN), or both.  If you enable this policy setting, users can configure advanced startup options in the BitLocker setup wizard.  If you disable or do not configure this policy setting, users can configure only basic options on computers with a TPM.  Note: If you want to require the use of a startup PIN and a USB flash drive, you must configure BitLocker settings using the command-line tool manage-bde instead of the BitLocker Drive Encryption setup wizard.</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\FVE,EnableBDEWithNoTPM,1 -->
+
+    <FixprivPolicy id="38">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\FVE">
+       <keyValue>
+         <valueName>EnableBDEWithNoTPM</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>This policy setting allows you to configure whether BitLocker requires additional authentication each time the computer starts and whether you are using BitLocker with or without a Trusted Platform Module (TPM). This policy setting is applied when you turn on BitLocker.  Note: Only one of the additional authentication options can be required at startup, otherwise a policy error occurs.  If you want to use BitLocker on a computer without a TPM, select the "Allow BitLocker without a compatible TPM" check box. In this mode either a password or a USB drive is required for start-up. When using a startup key, the key information used to encrypt the drive is stored on the USB drive, creating a USB key. When the USB key is inserted the access to the drive is authenticated and the drive is accessible. If the USB key is lost or unavailable or if you have forgotten the password then you will need to use one of the BitLocker recovery options to access the drive.  On a computer with a compatible TPM, four types of authentication methods can be used at startup to provide added protection for encrypted data. When the computer starts, it can use only the TPM for authentication, or it can also require insertion of a USB flash drive containing a startup key, the entry of a 4-digit to 20-digit personal identification number (PIN), or both.  If you enable this policy setting, users can configure advanced startup options in the BitLocker setup wizard.  If you disable or do not configure this policy setting, users can configure only basic options on computers with a TPM.  Note: If you want to require the use of a startup PIN and a USB flash drive, you must configure BitLocker settings using the command-line tool manage-bde instead of the BitLocker Drive Encryption setup wizard.</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\FVE,UseTPM,2 -->
+
+    <FixprivPolicy id="39">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\FVE">
+       <keyValue>
+         <valueName>UseTPM</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>This policy setting allows you to configure whether BitLocker requires additional authentication each time the computer starts and whether you are using BitLocker with or without a Trusted Platform Module (TPM). This policy setting is applied when you turn on BitLocker.  Note: Only one of the additional authentication options can be required at startup, otherwise a policy error occurs.  If you want to use BitLocker on a computer without a TPM, select the "Allow BitLocker without a compatible TPM" check box. In this mode either a password or a USB drive is required for start-up. When using a startup key, the key information used to encrypt the drive is stored on the USB drive, creating a USB key. When the USB key is inserted the access to the drive is authenticated and the drive is accessible. If the USB key is lost or unavailable or if you have forgotten the password then you will need to use one of the BitLocker recovery options to access the drive.  On a computer with a compatible TPM, four types of authentication methods can be used at startup to provide added protection for encrypted data. When the computer starts, it can use only the TPM for authentication, or it can also require insertion of a USB flash drive containing a startup key, the entry of a 4-digit to 20-digit personal identification number (PIN), or both.  If you enable this policy setting, users can configure advanced startup options in the BitLocker setup wizard.  If you disable or do not configure this policy setting, users can configure only basic options on computers with a TPM.  Note: If you want to require the use of a startup PIN and a USB flash drive, you must configure BitLocker settings using the command-line tool manage-bde instead of the BitLocker Drive Encryption setup wizard.</valueDescription>
+          <valueData>2</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\FVE,UseTPMPIN,2 -->
+
+    <FixprivPolicy id="40">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\FVE">
+       <keyValue>
+         <valueName>UseTPMPIN</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>This policy setting allows you to configure whether BitLocker requires additional authentication each time the computer starts and whether you are using BitLocker with or without a Trusted Platform Module (TPM). This policy setting is applied when you turn on BitLocker.  Note: Only one of the additional authentication options can be required at startup, otherwise a policy error occurs.  If you want to use BitLocker on a computer without a TPM, select the "Allow BitLocker without a compatible TPM" check box. In this mode either a password or a USB drive is required for start-up. When using a startup key, the key information used to encrypt the drive is stored on the USB drive, creating a USB key. When the USB key is inserted the access to the drive is authenticated and the drive is accessible. If the USB key is lost or unavailable or if you have forgotten the password then you will need to use one of the BitLocker recovery options to access the drive.  On a computer with a compatible TPM, four types of authentication methods can be used at startup to provide added protection for encrypted data. When the computer starts, it can use only the TPM for authentication, or it can also require insertion of a USB flash drive containing a startup key, the entry of a 4-digit to 20-digit personal identification number (PIN), or both.  If you enable this policy setting, users can configure advanced startup options in the BitLocker setup wizard.  If you disable or do not configure this policy setting, users can configure only basic options on computers with a TPM.  Note: If you want to require the use of a startup PIN and a USB flash drive, you must configure BitLocker settings using the command-line tool manage-bde instead of the BitLocker Drive Encryption setup wizard.</valueDescription>
+          <valueData>2</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\FVE,UseTPMKey,2 -->
+
+    <FixprivPolicy id="41">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\FVE">
+       <keyValue>
+         <valueName>UseTPMKey</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>This policy setting allows you to configure whether BitLocker requires additional authentication each time the computer starts and whether you are using BitLocker with or without a Trusted Platform Module (TPM). This policy setting is applied when you turn on BitLocker.  Note: Only one of the additional authentication options can be required at startup, otherwise a policy error occurs.  If you want to use BitLocker on a computer without a TPM, select the "Allow BitLocker without a compatible TPM" check box. In this mode either a password or a USB drive is required for start-up. When using a startup key, the key information used to encrypt the drive is stored on the USB drive, creating a USB key. When the USB key is inserted the access to the drive is authenticated and the drive is accessible. If the USB key is lost or unavailable or if you have forgotten the password then you will need to use one of the BitLocker recovery options to access the drive.  On a computer with a compatible TPM, four types of authentication methods can be used at startup to provide added protection for encrypted data. When the computer starts, it can use only the TPM for authentication, or it can also require insertion of a USB flash drive containing a startup key, the entry of a 4-digit to 20-digit personal identification number (PIN), or both.  If you enable this policy setting, users can configure advanced startup options in the BitLocker setup wizard.  If you disable or do not configure this policy setting, users can configure only basic options on computers with a TPM.  Note: If you want to require the use of a startup PIN and a USB flash drive, you must configure BitLocker settings using the command-line tool manage-bde instead of the BitLocker Drive Encryption setup wizard.</valueDescription>
+          <valueData>2</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\FVE,UseTPMKeyPIN,2 -->
+
+    <FixprivPolicy id="42">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\FVE">
+       <keyValue>
+         <valueName>UseTPMKeyPIN</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>This policy setting allows you to configure whether BitLocker requires additional authentication each time the computer starts and whether you are using BitLocker with or without a Trusted Platform Module (TPM). This policy setting is applied when you turn on BitLocker.  Note: Only one of the additional authentication options can be required at startup, otherwise a policy error occurs.  If you want to use BitLocker on a computer without a TPM, select the "Allow BitLocker without a compatible TPM" check box. In this mode either a password or a USB drive is required for start-up. When using a startup key, the key information used to encrypt the drive is stored on the USB drive, creating a USB key. When the USB key is inserted the access to the drive is authenticated and the drive is accessible. If the USB key is lost or unavailable or if you have forgotten the password then you will need to use one of the BitLocker recovery options to access the drive.  On a computer with a compatible TPM, four types of authentication methods can be used at startup to provide added protection for encrypted data. When the computer starts, it can use only the TPM for authentication, or it can also require insertion of a USB flash drive containing a startup key, the entry of a 4-digit to 20-digit personal identification number (PIN), or both.  If you enable this policy setting, users can configure advanced startup options in the BitLocker setup wizard.  If you disable or do not configure this policy setting, users can configure only basic options on computers with a TPM.  Note: If you want to require the use of a startup PIN and a USB flash drive, you must configure BitLocker settings using the command-line tool manage-bde instead of the BitLocker Drive Encryption setup wizard.</valueDescription>
+          <valueData>2</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\FVE,UseEnhancedPin,1 -->
+
+    <FixprivPolicy id="43">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\FVE">
+       <keyValue>
+         <valueName>UseEnhancedPin</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>This policy setting allows you to configure whether or not enhanced startup PINs are used with BitLocker.Enhanced startup PINs permit the use of characters including uppercase and lowercase letters symbols numbers and spaces. This policy setting is applied when you turn on BitLocker.If you enable this policy setting all new BitLocker startup PINs set will be enhanced PINs.Note:   Not all computers may support enhanced PINs in the pre-boot environment. It is strongly recommended that users perform a system check during BitLocker setup.If you disable or do not configure this policy setting enhanced PINs will not be used.      </valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\FVE,RDVConfigureBDE,1 -->
+
+    <FixprivPolicy id="44">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\FVE">
+       <keyValue>
+         <valueName>RDVConfigureBDE</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>This policy setting controls the use of BitLocker on removable data drives. This policy setting is applied when you turn on BitLocker.When this policy setting is enabled you can select property settings that control how users can configure BitLocker. Choose "Allow users to apply BitLocker protection on removable data drives" to permit the user to run the BitLocker setup wizard on a removable data drive. Choose "Allow users to suspend and decrypt BitLocker on removable data drives" to permit the user to remove BitLocker Drive encryption from the drive or suspend the encryption while maintenance is performed. Consult the BitLocker Drive Encryption Deployment Guide on Microsoft TechNet for more information on suspending BitLocker protection.If you do not configure this policy setting users can use BitLocker on removable disk drives.If you disable this policy setting users cannot use BitLocker on removable disk drives.</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\FVE,RDVAllowBDE,1 -->
+
+    <FixprivPolicy id="45">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\FVE">
+       <keyValue>
+         <valueName>RDVAllowBDE</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription> This policy setting controls the use of BitLocker on removable data drives. This policy setting is applied when you turn on BitLocker.When this policy setting is enabled you can select property settings that control how users can configure BitLocker. Choose "Allow users to apply BitLocker protection on removable data drives" to permit the user to run the BitLocker setup wizard on a removable data drive. Choose "Allow users to suspend and decrypt BitLocker on removable data drives" to permit the user to remove BitLocker Drive encryption from the drive or suspend the encryption while maintenance is performed. Consult the BitLocker Drive Encryption Deployment Guide on Microsoft TechNet for more information on suspending BitLocker protection.If you do not configure this policy setting users can use BitLocker on removable disk drives.If you disable this policy setting users cannot use BitLocker on removable disk drives. </valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\FVE,RDVDisableBDE,1 -->
+
+    <FixprivPolicy id="46">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\FVE">
+       <keyValue>
+         <valueName>RDVDisableBDE</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>This policy setting controls the use of BitLocker on removable data drives. This policy setting is applied when you turn on BitLocker.When this policy setting is enabled you can select property settings that control how users can configure BitLocker. Choose "Allow users to apply BitLocker protection on removable data drives" to permit the user to run the BitLocker setup wizard on a removable data drive. Choose "Allow users to suspend and decrypt BitLocker on removable data drives" to permit the user to remove BitLocker Drive encryption from the drive or suspend the encryption while maintenance is performed. Consult the BitLocker Drive Encryption Deployment Guide on Microsoft TechNet for more information on suspending BitLocker protection.If you do not configure this policy setting users can use BitLocker on removable disk drives.If you disable this policy setting users cannot use BitLocker on removable disk drives.</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\FVE,RDVDenyCrossOrg,0 -->
+
+    <FixprivPolicy id="47">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\FVE">
+       <keyValue>
+         <valueName>RDVDenyCrossOrg</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>This policy setting configures whether BitLocker protection is required for a computer to be able to write data to a removable data drive.If you enable this policy setting all removable data drives that are not BitLocker-protected will be mounted as read-only. If the drive is protected by BitLocker it will be mounted with read and write access.If the "Deny write access to devices configured in another organization" option is selected only drives with identification fields matching the computer's identification fields will be given write access. When a removable data drive is accessed it will be checked for valid identification field and allowed identification fields. These fields are defined by the "Provide the unique identifiers for your organization" policy setting.If you disable or do not configure this policy setting all removable data drives on the computer will be mounted with read and write access.Note: This policy setting can be overridden by the policy settings under User Configuration\Administrative Templates\System\Removable Storage Access. If the "Removable Disks: Deny write access" policy setting is enabled this policy setting will be ignored.</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\FVE,RDVHardwareEncryption,1 -->
+
+    <FixprivPolicy id="48">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\FVE">
+       <keyValue>
+         <valueName>RDVHardwareEncryption</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>This policy setting allows you to manage BitLocker's use of hardware-based encryption on removable data drives and specify which encryption algorithms it can use with hardware-based encryption.</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\FVE,RDVAllowSoftwareEncryptionFailover,1 -->
+
+    <FixprivPolicy id="49">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\FVE">
+       <keyValue>
+         <valueName>RDVAllowSoftwareEncryptionFailover</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>This policy setting allows you to manage BitLocker?s use of hardware-based encryption on removable data drives and specify which encryption algorithms it can use with hardware-based encryption. Using hardware-based encryption can improve performance of drive operations that involve frequent reading or writing of data to the drive.  If you enable this policy setting, you can specify additional options that control whether BitLocker software-based encryption is used instead of hardware-based encryption on computers that do not support hardware-based encryption and whether you want to restrict the encryption algorithms and cipher suites used with hardware-based encryption.  If you disable this policy setting, BitLocker cannot use hardware-based encryption with operating system drives and BitLocker software-based encryption will be used by default when the drive is encrypted.  If you do not configure this policy setting, BitLocker will use hardware-based encryption with the encryption algorithm set for the drive. If hardware-based encryption is not available BitLocker software-based encryption will be used instead.  Note: The ?Choose drive encryption method and cipher strength? policy setting does not apply to hardware-based encryption. The encryption algorithm used by hardware-based encryption is set when the drive is partitioned. By default, BitLocker uses the algorithm configured on the drive to encrypt the drive. The ?Restrict encryption algorithms and cipher suites allowed for hardware-based encryption? option enables you to restrict the encryption algorithms that BitLocker can use with hardware encryption. If the algorithm set for the drive is not available, BitLocker will disable the use of hardware-based encryption.  Encryption algorithms are specified by object identifiers (OID). For example:  - AES 128 in CBC mode OID: 2.16.840.1.101.3.4.1.2  - AES 256 in CBC mode OID: 2.16.840.1.101.3.4.1.42</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\FVE,RDVRestrictHardwareEncryptionAlgorithms,0 -->
+
+    <FixprivPolicy id="50">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\FVE">
+       <keyValue>
+         <valueName>RDVRestrictHardwareEncryptionAlgorithms</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>This policy setting allows you to manage BitLocker?s use of hardware-based encryption on removable data drives and specify which encryption algorithms it can use with hardware-based encryption. Using hardware-based encryption can improve performance of drive operations that involve frequent reading or writing of data to the drive.  If you enable this policy setting, you can specify additional options that control whether BitLocker software-based encryption is used instead of hardware-based encryption on computers that do not support hardware-based encryption and whether you want to restrict the encryption algorithms and cipher suites used with hardware-based encryption.  If you disable this policy setting, BitLocker cannot use hardware-based encryption with operating system drives and BitLocker software-based encryption will be used by default when the drive is encrypted.  If you do not configure this policy setting, BitLocker will use hardware-based encryption with the encryption algorithm set for the drive. If hardware-based encryption is not available BitLocker software-based encryption will be used instead.  Note: The ?Choose drive encryption method and cipher strength? policy setting does not apply to hardware-based encryption. The encryption algorithm used by hardware-based encryption is set when the drive is partitioned. By default, BitLocker uses the algorithm configured on the drive to encrypt the drive. The ?Restrict encryption algorithms and cipher suites allowed for hardware-based encryption? option enables you to restrict the encryption algorithms that BitLocker can use with hardware encryption. If the algorithm set for the drive is not available, BitLocker will disable the use of hardware-based encryption.  Encryption algorithms are specified by object identifiers (OID). For example:  - AES 128 in CBC mode OID: 2.16.840.1.101.3.4.1.2  - AES 256 in CBC mode OID: 2.16.840.1.101.3.4.1.42</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\FVE,RDVPassphrase,1 -->
+
+    <FixprivPolicy id="51">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\FVE">
+       <keyValue>
+         <valueName>RDVPassphrase</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>This policy setting specifies whether a password is required to unlock BitLocker-protected removable data drives. If you choose to allow use of a password you can require a password to be used enforce complexity requirements and configure a minimum length. For the complexity requirement setting to be effective the Group Policy setting "Password must meet complexity requirements" located in Computer Configuration\Windows Settings\Security Settings\Account Policies\Password Policy\ must be also enabled.Note: These settings are enforced when turning on BitLocker not when unlocking a volume. BitLocker will allow unlocking a drive with any of the protectors available on the drive.If you enable this policy setting users can configure a password that meets the requirements that you define. To require the use of a password select "Require password for removable data drive". To enforce complexity requirements on the password select "Require complexity".When set to "Require complexity" a connection to a domain controller is necessary when BitLocker is enabled to validate the complexity the password. When set to "Allow complexity" a connection to a domain controller will be attempted to validate the complexity adheres to the rules set by the policy but if no domain controllers are found the password will still be accepted regardless of actual password complexity and the drive will be encrypted using that password as a protector. When set to "Do not allow complexity" no password complexity validation will be done.Passwords must be at least 8 characters. To configure a greater minimum length for the password enter the desired number of characters in the "Minimum password length" box.If you disable this policy setting the user is not allowed to use a password.If you do not configure this policy setting passwords will be supported with the default settings which do not include password complexity requirements and require only 8 characters.Note: Password
+s cannot be used if FIPS-compliance is enabled. The "System cryptography: Use FIPS-compliant algorithms for encryption hashing and signing" policy setting in Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options specifies whether FIPS-compliance is enabled.</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\FVE,RDVEnforcePassphrase,0 -->
+
+    <FixprivPolicy id="52">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\FVE">
+       <keyValue>
+         <valueName>RDVEnforcePassphrase</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>This policy setting specifies whether a password is required to unlock BitLocker-protected removable data drives. If you choose to allow use of a password you can require a password to be used enforce complexity requirements and configure a minimum length. For the complexity requirement setting to be effective the Group Policy setting "Password must meet complexity requirements" located in Computer Configuration\Windows Settings\Security Settings\Account Policies\Password Policy\ must be also enabled.Note: These settings are enforced when turning on BitLocker not when unlocking a volume. BitLocker will allow unlocking a drive with any of the protectors available on the drive.If you enable this policy setting users can configure a password that meets the requirements that you define. To require the use of a password select "Require password for removable data drive". To enforce complexity requirements on the password select "Require complexity".When set to "Require complexity" a connection to a domain controller is necessary when BitLocker is enabled to validate the complexity the password. When set to "Allow complexity" a connection to a domain controller will be attempted to validate the complexity adheres to the rules set by the policy but if no domain controllers are found the password will still be accepted regardless of actual password complexity and the drive will be encrypted using that password as a protector. When set to "Do not allow complexity" no password complexity validation will be done.Passwords must be at least 8 characters. To configure a greater minimum length for the password enter the desired number of characters in the "Minimum password length" box.If you disable this policy setting the user is not allowed to use a password.If you do not configure this policy setting passwords will be supported with the default settings which do not include password complexity requirements and require only 8 characters.Note: Password
+s cannot be used if FIPS-compliance is enabled. The "System cryptography: Use FIPS-compliant algorithms for encryption hashing and signing" policy setting in Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options specifies whether FIPS-compliance is enabled.</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\FVE,RDVPassphraseComplexity,2 -->
+
+    <FixprivPolicy id="53">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\FVE">
+       <keyValue>
+         <valueName>RDVPassphraseComplexity</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>This policy setting specifies whether a password is required to unlock BitLocker-protected removable data drives. If you choose to allow use of a password you can require a password to be used enforce complexity requirements and configure a minimum length. For the complexity requirement setting to be effective the Group Policy setting "Password must meet complexity requirements" located in Computer Configuration\Windows Settings\Security Settings\Account Policies\Password Policy\ must be also enabled.Note: These settings are enforced when turning on BitLocker not when unlocking a volume. BitLocker will allow unlocking a drive with any of the protectors available on the drive.If you enable this policy setting users can configure a password that meets the requirements that you define. To require the use of a password select "Require password for removable data drive". To enforce complexity requirements on the password select "Require complexity".When set to "Require complexity" a connection to a domain controller is necessary when BitLocker is enabled to validate the complexity the password. When set to "Allow complexity" a connection to a domain controller will be attempted to validate the complexity adheres to the rules set by the policy but if no domain controllers are found the password will still be accepted regardless of actual password complexity and the drive will be encrypted using that password as a protector. When set to "Do not allow complexity" no password complexity validation will be done.Passwords must be at least 8 characters. To configure a greater minimum length for the password enter the desired number of characters in the "Minimum password length" box.If you disable this policy setting the user is not allowed to use a password.If you do not configure this policy setting passwords will be supported with the default settings which do not include password complexity requirements and require only 8 characters.Note: Password
+s cannot be used if FIPS-compliance is enabled. The "System cryptography: Use FIPS-compliant algorithms for encryption hashing and signing" policy setting in Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options specifies whether FIPS-compliance is enabled.</valueDescription>
+          <valueData>2</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\FVE,RDVPassphraseLength,8 -->
+
+    <FixprivPolicy id="54">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\FVE">
+       <keyValue>
+         <valueName>RDVPassphraseLength</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>This policy setting specifies whether a password is required to unlock BitLocker-protected removable data drives. If you choose to allow use of a password you can require a password to be used enforce complexity requirements and configure a minimum length. For the complexity requirement setting to be effective the Group Policy setting "Password must meet complexity requirements" located in Computer Configuration\Windows Settings\Security Settings\Account Policies\Password Policy\ must be also enabled.Note: These settings are enforced when turning on BitLocker not when unlocking a volume. BitLocker will allow unlocking a drive with any of the protectors available on the drive.If you enable this policy setting users can configure a password that meets the requirements that you define. To require the use of a password select "Require password for removable data drive". To enforce complexity requirements on the password select "Require complexity".When set to "Require complexity" a connection to a domain controller is necessary when BitLocker is enabled to validate the complexity the password. When set to "Allow complexity" a connection to a domain controller will be attempted to validate the complexity adheres to the rules set by the policy but if no domain controllers are found the password will still be accepted regardless of actual password complexity and the drive will be encrypted using that password as a protector. When set to "Do not allow complexity" no password complexity validation will be done.Passwords must be at least 8 characters. To configure a greater minimum length for the password enter the desired number of characters in the "Minimum password length" box.If you disable this policy setting the user is not allowed to use a password.If you do not configure this policy setting passwords will be supported with the default settings which do not include password complexity requirements and require only 8 characters.Note: Password
+s cannot be used if FIPS-compliance is enabled. The "System cryptography: Use FIPS-compliant algorithms for encryption hashing and signing" policy setting in Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options specifies whether FIPS-compliance is enabled.</valueDescription>
+          <valueData>8</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\FVE,RDVRecovery,1 -->
+
+    <FixprivPolicy id="55">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\FVE">
+       <keyValue>
+         <valueName>RDVRecovery</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>This policy setting allows you to control how BitLocker-protected removable data drives are recovered in the absence of the required credentials. This policy setting is applied when you turn on BitLocker.  The "Allow data recovery agent" check box is used to specify whether a data recovery agent can be used with BitLocker-protected removable data drives. Before a data recovery agent can be used it must be added from the Public Key Policies item in either the Group Policy Management Console or the Local Group Policy Editor. Consult the BitLocker Drive Encryption Deployment Guide on Microsoft TechNet for more information about adding data recovery agents.  In "Configure user storage of BitLocker recovery information" select whether users are allowed, required, or not allowed to generate a 48-digit recovery password or a 256-bit recovery key.  Select "Omit recovery options from the BitLocker setup wizard" to prevent users from specifying recovery options when they turn on BitLocker on a drive. This means that you will not be able to specify which recovery option to use when you turn on BitLocker, instead BitLocker recovery options for the drive are determined by the policy setting.  In "Save BitLocker recovery information to Active Directory Domain Services" choose which BitLocker recovery information to store in AD DS for removable data drives. If you select "Backup recovery password and key package", both the BitLocker recovery password and key package are stored in AD DS. If you select "Backup recovery password only" only the recovery password is stored in AD DS.  Select the "Do not enable BitLocker until recovery information is stored in AD DS for removable data drives" check box if you want to prevent users from enabling BitLocker unless the computer is connected to the domain and the backup of BitLocker recovery information to AD DS succeeds.  Note: If the "Do not enable BitLocker until recovery information is stored in AD DS for fixed
+ data drives" check box is selected, a recovery password is automatically generated.  If you enable this policy setting, you can control the methods available to users to recover data from BitLocker-protected removable data drives.  If this policy setting is not configured or disabled, the default recovery options are supported for BitLocker recovery. By default a DRA is allowed, the recovery options can be specified by the user including the recovery password and recovery key, and recovery information is not backed up to AD DS</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\FVE,RDVManageDRA,1 -->
+
+    <FixprivPolicy id="56">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\FVE">
+       <keyValue>
+         <valueName>RDVManageDRA</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>This policy setting allows you to control how BitLocker-protected removable data drives are recovered in the absence of the required credentials. This policy setting is applied when you turn on BitLocker.  The "Allow data recovery agent" check box is used to specify whether a data recovery agent can be used with BitLocker-protected removable data drives. Before a data recovery agent can be used it must be added from the Public Key Policies item in either the Group Policy Management Console or the Local Group Policy Editor. Consult the BitLocker Drive Encryption Deployment Guide on Microsoft TechNet for more information about adding data recovery agents.  In "Configure user storage of BitLocker recovery information" select whether users are allowed, required, or not allowed to generate a 48-digit recovery password or a 256-bit recovery key.  Select "Omit recovery options from the BitLocker setup wizard" to prevent users from specifying recovery options when they turn on BitLocker on a drive. This means that you will not be able to specify which recovery option to use when you turn on BitLocker, instead BitLocker recovery options for the drive are determined by the policy setting.  In "Save BitLocker recovery information to Active Directory Domain Services" choose which BitLocker recovery information to store in AD DS for removable data drives. If you select "Backup recovery password and key package", both the BitLocker recovery password and key package are stored in AD DS. If you select "Backup recovery password only" only the recovery password is stored in AD DS.  Select the "Do not enable BitLocker until recovery information is stored in AD DS for removable data drives" check box if you want to prevent users from enabling BitLocker unless the computer is connected to the domain and the backup of BitLocker recovery information to AD DS succeeds.  Note: If the "Do not enable BitLocker until recovery information is stored in AD DS for fixed
+ data drives" check box is selected, a recovery password is automatically generated.  If you enable this policy setting, you can control the methods available to users to recover data from BitLocker-protected removable data drives.  If this policy setting is not configured or disabled, the default recovery options are supported for BitLocker recovery. By default a DRA is allowed, the recovery options can be specified by the user including the recovery password and recovery key, and recovery information is not backed up to AD DS</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\FVE,RDVRecoveryPassword,2 -->
+
+    <FixprivPolicy id="57">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\FVE">
+       <keyValue>
+         <valueName>RDVRecoveryPassword</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>This policy setting allows you to control how BitLocker-protected removable data drives are recovered in the absence of the required credentials. This policy setting is applied when you turn on BitLocker.  The "Allow data recovery agent" check box is used to specify whether a data recovery agent can be used with BitLocker-protected removable data drives. Before a data recovery agent can be used it must be added from the Public Key Policies item in either the Group Policy Management Console or the Local Group Policy Editor. Consult the BitLocker Drive Encryption Deployment Guide on Microsoft TechNet for more information about adding data recovery agents.  In "Configure user storage of BitLocker recovery information" select whether users are allowed, required, or not allowed to generate a 48-digit recovery password or a 256-bit recovery key.  Select "Omit recovery options from the BitLocker setup wizard" to prevent users from specifying recovery options when they turn on BitLocker on a drive. This means that you will not be able to specify which recovery option to use when you turn on BitLocker, instead BitLocker recovery options for the drive are determined by the policy setting.  In "Save BitLocker recovery information to Active Directory Domain Services" choose which BitLocker recovery information to store in AD DS for removable data drives. If you select "Backup recovery password and key package", both the BitLocker recovery password and key package are stored in AD DS. If you select "Backup recovery password only" only the recovery password is stored in AD DS.  Select the "Do not enable BitLocker until recovery information is stored in AD DS for removable data drives" check box if you want to prevent users from enabling BitLocker unless the computer is connected to the domain and the backup of BitLocker recovery information to AD DS succeeds.  Note: If the "Do not enable BitLocker until recovery information is stored in AD DS for fixed
+ data drives" check box is selected, a recovery password is automatically generated.  If you enable this policy setting, you can control the methods available to users to recover data from BitLocker-protected removable data drives.  If this policy setting is not configured or disabled, the default recovery options are supported for BitLocker recovery. By default a DRA is allowed, the recovery options can be specified by the user including the recovery password and recovery key, and recovery information is not backed up to AD DS</valueDescription>
+          <valueData>2</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\FVE,RDVRecoveryKey,2 -->
+
+    <FixprivPolicy id="58">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\FVE">
+       <keyValue>
+         <valueName>RDVRecoveryKey</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>This policy setting allows you to control how BitLocker-protected removable data drives are recovered in the absence of the required credentials. This policy setting is applied when you turn on BitLocker.  The "Allow data recovery agent" check box is used to specify whether a data recovery agent can be used with BitLocker-protected removable data drives. Before a data recovery agent can be used it must be added from the Public Key Policies item in either the Group Policy Management Console or the Local Group Policy Editor. Consult the BitLocker Drive Encryption Deployment Guide on Microsoft TechNet for more information about adding data recovery agents.  In "Configure user storage of BitLocker recovery information" select whether users are allowed, required, or not allowed to generate a 48-digit recovery password or a 256-bit recovery key.  Select "Omit recovery options from the BitLocker setup wizard" to prevent users from specifying recovery options when they turn on BitLocker on a drive. This means that you will not be able to specify which recovery option to use when you turn on BitLocker, instead BitLocker recovery options for the drive are determined by the policy setting.  In "Save BitLocker recovery information to Active Directory Domain Services" choose which BitLocker recovery information to store in AD DS for removable data drives. If you select "Backup recovery password and key package", both the BitLocker recovery password and key package are stored in AD DS. If you select "Backup recovery password only" only the recovery password is stored in AD DS.  Select the "Do not enable BitLocker until recovery information is stored in AD DS for removable data drives" check box if you want to prevent users from enabling BitLocker unless the computer is connected to the domain and the backup of BitLocker recovery information to AD DS succeeds.  Note: If the "Do not enable BitLocker until recovery information is stored in AD DS for fixed
+ data drives" check box is selected, a recovery password is automatically generated.  If you enable this policy setting, you can control the methods available to users to recover data from BitLocker-protected removable data drives.  If this policy setting is not configured or disabled, the default recovery options are supported for BitLocker recovery. By default a DRA is allowed, the recovery options can be specified by the user including the recovery password and recovery key, and recovery information is not backed up to AD DS</valueDescription>
+          <valueData>2</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\FVE,RDVHideRecoveryPage,0 -->
+
+    <FixprivPolicy id="59">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\FVE">
+       <keyValue>
+         <valueName>RDVHideRecoveryPage</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>This policy setting allows you to control how BitLocker-protected removable data drives are recovered in the absence of the required credentials. This policy setting is applied when you turn on BitLocker.  The "Allow data recovery agent" check box is used to specify whether a data recovery agent can be used with BitLocker-protected removable data drives. Before a data recovery agent can be used it must be added from the Public Key Policies item in either the Group Policy Management Console or the Local Group Policy Editor. Consult the BitLocker Drive Encryption Deployment Guide on Microsoft TechNet for more information about adding data recovery agents.  In "Configure user storage of BitLocker recovery information" select whether users are allowed, required, or not allowed to generate a 48-digit recovery password or a 256-bit recovery key.  Select "Omit recovery options from the BitLocker setup wizard" to prevent users from specifying recovery options when they turn on BitLocker on a drive. This means that you will not be able to specify which recovery option to use when you turn on BitLocker, instead BitLocker recovery options for the drive are determined by the policy setting.  In "Save BitLocker recovery information to Active Directory Domain Services" choose which BitLocker recovery information to store in AD DS for removable data drives. If you select "Backup recovery password and key package", both the BitLocker recovery password and key package are stored in AD DS. If you select "Backup recovery password only" only the recovery password is stored in AD DS.  Select the "Do not enable BitLocker until recovery information is stored in AD DS for removable data drives" check box if you want to prevent users from enabling BitLocker unless the computer is connected to the domain and the backup of BitLocker recovery information to AD DS succeeds.  Note: If the "Do not enable BitLocker until recovery information is stored in AD DS for fixed
+ data drives" check box is selected, a recovery password is automatically generated.  If you enable this policy setting, you can control the methods available to users to recover data from BitLocker-protected removable data drives.  If this policy setting is not configured or disabled, the default recovery options are supported for BitLocker recovery. By default a DRA is allowed, the recovery options can be specified by the user including the recovery password and recovery key, and recovery information is not backed up to AD DS</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\FVE,RDVActiveDirectoryBackup,1 -->
+
+    <FixprivPolicy id="60">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\FVE">
+       <keyValue>
+         <valueName>RDVActiveDirectoryBackup</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>This policy setting allows you to control how BitLocker-protected removable data drives are recovered in the absence of the required credentials. This policy setting is applied when you turn on BitLocker.  The "Allow data recovery agent" check box is used to specify whether a data recovery agent can be used with BitLocker-protected removable data drives. Before a data recovery agent can be used it must be added from the Public Key Policies item in either the Group Policy Management Console or the Local Group Policy Editor. Consult the BitLocker Drive Encryption Deployment Guide on Microsoft TechNet for more information about adding data recovery agents.  In "Configure user storage of BitLocker recovery information" select whether users are allowed, required, or not allowed to generate a 48-digit recovery password or a 256-bit recovery key.  Select "Omit recovery options from the BitLocker setup wizard" to prevent users from specifying recovery options when they turn on BitLocker on a drive. This means that you will not be able to specify which recovery option to use when you turn on BitLocker, instead BitLocker recovery options for the drive are determined by the policy setting.  In "Save BitLocker recovery information to Active Directory Domain Services" choose which BitLocker recovery information to store in AD DS for removable data drives. If you select "Backup recovery password and key package", both the BitLocker recovery password and key package are stored in AD DS. If you select "Backup recovery password only" only the recovery password is stored in AD DS.  Select the "Do not enable BitLocker until recovery information is stored in AD DS for removable data drives" check box if you want to prevent users from enabling BitLocker unless the computer is connected to the domain and the backup of BitLocker recovery information to AD DS succeeds.  Note: If the "Do not enable BitLocker until recovery information is stored in AD DS for fixed
+ data drives" check box is selected, a recovery password is automatically generated.  If you enable this policy setting, you can control the methods available to users to recover data from BitLocker-protected removable data drives.  If this policy setting is not configured or disabled, the default recovery options are supported for BitLocker recovery. By default a DRA is allowed, the recovery options can be specified by the user including the recovery password and recovery key, and recovery information is not backed up to AD DS</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\FVE,RDVActiveDirectoryInfoToStore,1 -->
+
+    <FixprivPolicy id="61">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\FVE">
+       <keyValue>
+         <valueName>RDVActiveDirectoryInfoToStore</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>This policy setting allows you to control how BitLocker-protected removable data drives are recovered in the absence of the required credentials. This policy setting is applied when you turn on BitLocker.  The "Allow data recovery agent" check box is used to specify whether a data recovery agent can be used with BitLocker-protected removable data drives. Before a data recovery agent can be used it must be added from the Public Key Policies item in either the Group Policy Management Console or the Local Group Policy Editor. Consult the BitLocker Drive Encryption Deployment Guide on Microsoft TechNet for more information about adding data recovery agents.  In "Configure user storage of BitLocker recovery information" select whether users are allowed, required, or not allowed to generate a 48-digit recovery password or a 256-bit recovery key.  Select "Omit recovery options from the BitLocker setup wizard" to prevent users from specifying recovery options when they turn on BitLocker on a drive. This means that you will not be able to specify which recovery option to use when you turn on BitLocker, instead BitLocker recovery options for the drive are determined by the policy setting.  In "Save BitLocker recovery information to Active Directory Domain Services" choose which BitLocker recovery information to store in AD DS for removable data drives. If you select "Backup recovery password and key package", both the BitLocker recovery password and key package are stored in AD DS. If you select "Backup recovery password only" only the recovery password is stored in AD DS.  Select the "Do not enable BitLocker until recovery information is stored in AD DS for removable data drives" check box if you want to prevent users from enabling BitLocker unless the computer is connected to the domain and the backup of BitLocker recovery information to AD DS succeeds.  Note: If the "Do not enable BitLocker until recovery information is stored in AD DS for fixed
+ data drives" check box is selected, a recovery password is automatically generated.  If you enable this policy setting, you can control the methods available to users to recover data from BitLocker-protected removable data drives.  If this policy setting is not configured or disabled, the default recovery options are supported for BitLocker recovery. By default a DRA is allowed, the recovery options can be specified by the user including the recovery password and recovery key, and recovery information is not backed up to AD DS</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\FVE,RDVRequireActiveDirectoryBackup,0 -->
+
+    <FixprivPolicy id="62">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\FVE">
+       <keyValue>
+         <valueName>RDVRequireActiveDirectoryBackup</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>This policy setting allows you to control how BitLocker-protected removable data drives are recovered in the absence of the required credentials. This policy setting is applied when you turn on BitLocker.  The "Allow data recovery agent" check box is used to specify whether a data recovery agent can be used with BitLocker-protected removable data drives. Before a data recovery agent can be used it must be added from the Public Key Policies item in either the Group Policy Management Console or the Local Group Policy Editor. Consult the BitLocker Drive Encryption Deployment Guide on Microsoft TechNet for more information about adding data recovery agents.  In "Configure user storage of BitLocker recovery information" select whether users are allowed, required, or not allowed to generate a 48-digit recovery password or a 256-bit recovery key.  Select "Omit recovery options from the BitLocker setup wizard" to prevent users from specifying recovery options when they turn on BitLocker on a drive. This means that you will not be able to specify which recovery option to use when you turn on BitLocker, instead BitLocker recovery options for the drive are determined by the policy setting.  In "Save BitLocker recovery information to Active Directory Domain Services" choose which BitLocker recovery information to store in AD DS for removable data drives. If you select "Backup recovery password and key package", both the BitLocker recovery password and key package are stored in AD DS. If you select "Backup recovery password only" only the recovery password is stored in AD DS.  Select the "Do not enable BitLocker until recovery information is stored in AD DS for removable data drives" check box if you want to prevent users from enabling BitLocker unless the computer is connected to the domain and the backup of BitLocker recovery information to AD DS succeeds.  Note: If the "Do not enable BitLocker until recovery information is stored in AD DS for fixed
+ data drives" check box is selected, a recovery password is automatically generated.  If you enable this policy setting, you can control the methods available to users to recover data from BitLocker-protected removable data drives.  If this policy setting is not configured or disabled, the default recovery options are supported for BitLocker recovery. By default a DRA is allowed, the recovery options can be specified by the user including the recovery password and recovery key, and recovery information is not backed up to AD DS</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\PassportForWork\PINComplexity,Digits,1 -->
+
+    <FixprivPolicy id="63">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\PassportForWork\\PINComplexity">
+       <keyValue>
+         <valueName>Digits</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>Use this policy setting to configure the use of digits in the Microsoft Passport for PIN.  If you enable or do not configure this policy setting, Microsoft Passport for Work requires users to include at least one digit in their PIN.  If you disable this policy setting, Microsoft Passport for Work does not allow users to use digits in their PIN.</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\PassportForWork\PINComplexity,LowercaseLetters,1 -->
+
+    <FixprivPolicy id="64">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\PassportForWork\\PINComplexity">
+       <keyValue>
+         <valueName>LowercaseLetters</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>Use this policy setting to configure the use of lowercase letters in the Microsoft Passport for PIN.  If you enable this policy setting, Microsoft Passport for Work requires users to include at least one lowercase letter in their PIN.  If you disable or do not configure this policy setting, Microsoft Passport for Work does not allow users to use lowercase letters in their PIN.</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\PassportForWork\PINComplexity,SpecialCharacters,1 -->
+
+    <FixprivPolicy id="65">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\PassportForWork\\PINComplexity">
+       <keyValue>
+         <valueName>SpecialCharacters</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>Use this policy setting to configure the use of special characters in the Microsoft Passport for PIN.  Allowable special characters are: ! " # $ % &amp; ' ( ) * + , - . / : ; &lt; = &gt; ? @ [ \\ ] ^ _ ` { | } ~ .  If you enable this policy setting, Microsoft Passport for Work requires users to include at least one special character in their PIN.  If you disable or do not configure this policy setting, Microsoft Passport for Work does not allow users to use special characters in their PIN.</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\PassportForWork\PINComplexity,UppercaseLetters,1 -->
+
+    <FixprivPolicy id="66">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\PassportForWork\\PINComplexity">
+       <keyValue>
+         <valueName>UppercaseLetters</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>Use this policy setting to configure the use of uppercase letters in the Microsoft Passport for PIN.  If you enable this policy setting, Microsoft Passport for Work requires users to include at least one uppercase letter in their PIN.  If you disable or do not configure this policy setting, Microsoft Passport for Work does not allow users to use uppercase letters in their PIN.</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\Windows\HotspotAuthentication,Enabled,0 -->
+
+    <FixprivPolicy id="67">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\Windows\\HotspotAuthentication">
+       <keyValue>
+         <valueName>Enabled</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription> This policy setting defines whether WLAN hotspots are probed for Wireless Internet Service Provider roaming (WISPr) protocol support.If a WLAN hotspot supports the WISPr protocol users can submit credentials when manually connecting to the network. If authentication is successful users will be connected automatically on subsequent attempts. Credentials can also be configured by network operators.If you enable this policy setting or if you do not configure this policy setting WLAN hotspots are automatically probed for WISPR protocol support.If you disable this policy setting WLAN hotspots are not probed for WISPr protocol support and users can only authenticate with WLAN hotspots using a web browser.</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\Windows\OneDrive,DisableLibrariesDefaultSaveToOneDrive,1 -->
+
+    <FixprivPolicy id="68">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\Windows\\OneDrive">
+       <keyValue>
+         <valueName>DisableLibrariesDefaultSaveToOneDrive</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>Disable libraries to save to OneDrive by default.</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\Windows\OneDrive,DisableFileSyncNGSC,1 -->
+
+    <FixprivPolicy id="69">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\Windows\\OneDrive">
+       <keyValue>
+         <valueName>DisableFileSyncNGSC</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription> This policy setting lets you prevent apps and features from working with files on OneDrive.If you enable this policy setting:* Users can't access OneDrive from the OneDrive app and file picker.* Windows Store apps can't access OneDrive using the WinRT API.* OneDrive doesn't appear in the navigation pane in File Explorer.* OneDrive files aren't kept in sync with the cloud.* Users can't automatically upload photos and videos from the camera roll folder.If you disable or do not configure this policy setting apps and features can work with OneDrive file storage.</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\Windows\OneDrive,DisableFileSync,1 -->
+
+    <FixprivPolicy id="70">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\Windows\\OneDrive">
+       <keyValue>
+         <valueName>DisableFileSync</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription> This policy setting lets you prevent apps and features from working with files on OneDrive.If you enable this policy setting:* Users can't access OneDrive from the OneDrive app and file picker.* Windows Store apps can't access OneDrive using the WinRT API.* OneDrive doesn't appear in the navigation pane in File Explorer.* OneDrive files aren't kept in sync with the cloud.* Users can't automatically upload photos and videos from the camera roll folder.If you disable or do not configure this policy setting apps and features can work with OneDrive file storage.</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\Windows\Windows Search,AllowCortana,0 -->
+
+    <FixprivPolicy id="71">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search">
+       <keyValue>
+         <valueName>AllowCortana</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>This policy setting specifies whether Cortana is allowed on the device.    If you enable or don't configure this setting, Cortana will be allowed on the device. If you disable this setting, Cortana will be turned off.    When Cortana is off, users will still be able to use search to find things on the device and on the Internet.</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\Windows\Windows Search,AllowCortanaAboveLock,0 -->
+
+    <FixprivPolicy id="72">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search">
+       <keyValue>
+         <valueName>AllowCortanaAboveLock</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>This policy setting determines whether or not the user can interact with Cortana using speech while the system is locked.  If you enable or don?t configure this setting, the user can interact with Cortana using speech while the system is locked.  If you disable this setting, the system will need to be unlocked for the user to interact with Cortana using speech.</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\Windows\Windows Search,AllowIndexingEncryptedStoresOrItems,0 -->
+
+    <FixprivPolicy id="73">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search">
+       <keyValue>
+         <valueName>AllowIndexingEncryptedStoresOrItems</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>This policy setting allows encrypted items to be indexed. If you enable this policy setting, indexing  will attempt to decrypt and index the content (access restrictions will still apply). If you disable this policy setting, the search service components (including non-Microsoft components) are expected not to index encrypted items or encrypted stores. This policy setting is not configured by default. If you do not configure this policy setting, the local setting, configured through Control Panel, will be used. By default, the Control Panel setting is set to not index encrypted content.  When this setting is enabled or disabled, the index is rebuilt completely.  Full volume encryption (such as BitLocker Drive Encryption or a non-Microsoft solution) must be used for the location of the index to maintain security for encrypted files.</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\Windows\Windows Search,AllowSearchToUseLocation,0 -->
+
+    <FixprivPolicy id="74">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search">
+       <keyValue>
+         <valueName>AllowSearchToUseLocation</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>This policy setting specifies whether search and Cortana can provide location aware search and Cortana results.    If this is enabled, search and Cortana can access location information.</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\Windows\Windows Search,ConnectedSearchUseWeb,0 -->
+
+    <FixprivPolicy id="75">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search">
+       <keyValue>
+         <valueName>ConnectedSearchUseWeb</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>This policy setting allows you to control whether or not Search can perform queries on the web, and if the web results are displayed in Search.  If you enable this policy setting, queries won't be performed on the web and web results won't be displayed when a user performs a query in Search.  If you disable this policy setting, queries will be performed on the web and web results will be displayed when a user performs a query in Search.  If you don't configure this policy setting, a user can choose whether or not Search can perform queries on the web, and if the web results are displayed in Search.</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\Windows\Windows Search,PreventIndexingEmailAttachments,1 -->
+
+    <FixprivPolicy id="76">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search">
+       <keyValue>
+         <valueName>PreventIndexingEmailAttachments</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>Enable this policy setting to prevent the indexing of the content of e-mail attachments. If enabled, indexing service components (including non-Microsoft components) are expected not to index e-mail attachments. Consider enabling this policy if you are concerned about the security or indexing performance of non-Microsoft document filters (iFilters). This policy is disabled by default.</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\Windows\Windows Search,PreventIndexingOfflineFiles,1 -->
+
+    <FixprivPolicy id="77">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search">
+       <keyValue>
+         <valueName>PreventIndexingOfflineFiles</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>If enabled, files on network shares made available offline are not indexed. Otherwise they are indexed. Disabled by default.</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\Windows\Windows Search,PreventIndexingOutlook,1 -->
+
+    <FixprivPolicy id="78">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search">
+       <keyValue>
+         <valueName>PreventIndexingOutlook</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>Enable this policy to prevent indexing of any Microsoft Outlook items. The default is to automatically index Outlook items. If this policy is enabled then the user's Outlook items will not be added to the index and the user will not see them in search results.</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\Windows\Windows Search,PreventIndexingPublicFolders,1 -->
+
+    <FixprivPolicy id="79">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search">
+       <keyValue>
+         <valueName>PreventIndexingPublicFolders</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>Enable this policy to prevent indexing public folders in Microsoft Office Outlook. When this policy is disabled or not configured, the user has the option to index cached public folders in Outlook. Public folders are only indexed when using Outlook 2003 or later. The user must be running in cached mode and the Download Public Folder Favorites option must be turned on.</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\Windows\WinRM\Service\WinRS,AllowRemoteShellAccess,0 -->
+
+    <FixprivPolicy id="80">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\Windows\\WinRM\\Service\\WinRS">
+       <keyValue>
+         <valueName>AllowRemoteShellAccess</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription> This policy setting configures access to remote shells.If you enable this policy setting and set it to False new remote shell connections are rejected by the server.If you disable or do not configure this policy setting new remote shell connections are allowed.</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,GPOM,System\CurrentControlSet\Policies\Microsoft\FVE,RDVDenyWriteAccess,0 -->
+
+    <FixprivPolicy id="81">
+      <key keyRoot="GPOM" keyName="System\\CurrentControlSet\\Policies\\Microsoft\\FVE">
+       <keyValue>
+         <valueName>RDVDenyWriteAccess</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>This policy setting configures whether BitLocker protection is required for a computer to be able to write data to a removable data drive.  If you enable this policy setting, all removable data drives that are not BitLocker-protected will be mounted as read-only. If the drive is protected by BitLocker, it will be mounted with read and write access.  If the "Deny write access to devices configured in another organization" option is selected, only drives with identification fields matching the computer's identification fields will be given write access. When a removable data drive is accessed it will be checked for valid identification field and allowed identification fields. These fields are defined by the "Provide the unique identifiers for your organization" policy setting.  If you disable or do not configure this policy setting, all removable data drives on the computer will be mounted with read and write access.  Note: This policy setting can be overridden by the policy settings under User Configuration\Administrative Templates\System\Removable Storage Access. If the "Removable Disks: Deny write access" policy setting is enabled this policy setting will be ignored.</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_SZ,GPOM,SOFTWARE\Policies\Microsoft\FVE,RDVAllowedHardwareEncryptionAlgorithms,2.16.840.1.101.3.4.1.2;2.16.840.1.101.3.4.1.42 -->
+
+    <FixprivPolicy id="82">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\FVE">
+       <keyValue>
+         <valueName>RDVAllowedHardwareEncryptionAlgorithms</valueName>
+          <valueType>REG_SZ</valueType>
+          <valueMode>POL_WSTRING</valueMode>
+          <valueDescription>This policy setting allows you to manage BitLocker?s use of hardware-based encryption on removable data drives and specify which encryption algorithms it can use with hardware-based encryption. Using hardware-based encryption can improve performance of drive operations that involve frequent reading or writing of data to the drive.  If you enable this policy setting, you can specify additional options that control whether BitLocker software-based encryption is used instead of hardware-based encryption on computers that do not support hardware-based encryption and whether you want to restrict the encryption algorithms and cipher suites used with hardware-based encryption.  If you disable this policy setting, BitLocker cannot use hardware-based encryption with operating system drives and BitLocker software-based encryption will be used by default when the drive is encrypted.  If you do not configure this policy setting, BitLocker will use hardware-based encryption with the encryption algorithm set for the drive. If hardware-based encryption is not available BitLocker software-based encryption will be used instead.  Note: The ?Choose drive encryption method and cipher strength? policy setting does not apply to hardware-based encryption. The encryption algorithm used by hardware-based encryption is set when the drive is partitioned. By default, BitLocker uses the algorithm configured on the drive to encrypt the drive. The ?Restrict encryption algorithms and cipher suites allowed for hardware-based encryption? option enables you to restrict the encryption algorithms that BitLocker can use with hardware encryption. If the algorithm set for the drive is not available, BitLocker will disable the use of hardware-based encryption.  Encryption algorithms are specified by object identifiers (OID). For example:  - AES 128 in CBC mode OID: 2.16.840.1.101.3.4.1.2  - AES 256 in CBC mode OID: 2.16.840.1.101.3.4.1.42</valueDescription>
+          <valueData>2.16.840.1.101.3.4.1.2;2.16.840.1.101.3.4.1.42</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\Windows\AppPrivacy,LetAppsAccessCallHistory,2 -->
+
+    <FixprivPolicy id="83">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\Windows\\AppPrivacy">
+       <keyValue>
+         <valueName>LetAppsAccessCallHistory</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription> This policy setting specifies whether Windows apps can access call history.If you choose the "User is in control" option employees in your organization can decide whether Windows apps can access call history by using Settings > Privacy on the device.If you choose the "Force Allow" option Windows apps are allowed to access the call history and employees in your organization cannot change it.If you choose the "Force Deny" option Windows apps are not allowed to access the call history and employees in your organization cannot change it.If you disable or do not configure this policy setting employees in your organization can decide whether Windows apps can access the call history by using Settings > Privacy on the device.If an app is open when this Group Policy object is applied on a device employees must restart the app or device for the policy changes to be applied to the app.</valueDescription>
+          <valueData>2</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DISABLE,GPOM,SOFTWARE\Policies\Microsoft\Windows\DataCollection,AllowTelemetry, -->
+
+    <FixprivPolicy id="84">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\Windows\\DataCollection">
+       <keyValue>
+         <valueName>AllowTelemetry</valueName>
+          <valueType>REG_DISABLE</valueType>
+          <valueMode>POL_DISABLED</valueMode>
+          <valueDescription>This policy setting determines the amount of diagnostic and usage data reported to Microsoft. A value of 0 will send minimal data to Microsoft. This data includes Malicious Software Removal Tool (MSRT) &amp; Windows Defender data if enabled and telemetry client settings. Setting a value of 0 applies to enterprise EDU IoT and server devices only. Setting a value of 0 for other devices is equivalent to choosing a value of 1. A value of 1 sends only a basic amount of diagnostic and usage data. Note that setting values of 0 or 1 will degrade certain experiences on the device. A value of 2 sends enhanced diagnostic and usage data. A value of 3 sends the same data as a value of 2 plus additional diagnostics data including the files and content that may have caused the problem. Windows 10 telemetry settings applies to the Windows operating system and some first party apps. This setting does not apply to third party apps running on Windows 10.If you disable or do not configure this policy setting users can configure the Telemetry level in Settings.</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DELETE,GPOM,SOFTWARE\Policies\Microsoft\PassportForWork\PINComplexity,History, -->
+
+    <FixprivPolicy id="85">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\PassportForWork\\PINComplexity">
+       <keyValue>
+         <valueName>History</valueName>
+          <valueType>REG_DELETE</valueType>
+          <valueMode>POL_DELETE</valueMode>
+          <valueDescription>This setting specifies the number of past PINs that can be associated to a user account that can?t be reused. This policy enables administrators to enhance security by ensuring that old PINs are not reused continually. PIN history is not preserved through PIN reset.  The value must be between 0 to 50 PINs. If this policy is set to 0, then storage of previous PINs is not required.  Default: 0.</valueDescription>
+          <valueData></valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,GPOM,System\CurrentControlSet\Policies,NtfsEncryptPagingFile,1 -->
+
+    <FixprivPolicy id="86">
+      <key keyRoot="GPOM" keyName="System\\CurrentControlSet\\Policies">
+       <keyValue>
+         <valueName>NtfsEncryptPagingFile</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>Encrypting the page file prevents malicious users from reading data that has been paged to disk, but also adds processing overhead for filesystem operations.  Enabling this setting will cause the page files to be encrypted.</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <FixprivPolicy id="87">
+      <key keyRoot="HKLM" keyName="SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon">
+       <keyValue>
+         <valueName>ARSOUserConsent</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>Use my sign in info to automatically finish setting up after an update.</valueDescription>
+          <valueData>2</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+    
+    <!-- REG_DWORD,HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\SmartGlass,UserAuthPolicy,0 -->
+
+    <FixprivPolicy id="88">
+      <key keyRoot="HKLM" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\SmartGlass">
+       <keyValue>
+         <valueName>UserAuthPolicy</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>Microsoft Smartglass: let apps on other devices open apps on this device.</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection,AllowTelemetry,0 -->
+
+    <FixprivPolicy id="89">
+      <key keyRoot="HKLM" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\DataCollection">
+       <keyValue>
+         <valueName>AllowTelemetry</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>Allow/Disallow Microsoft Windows Telemetry (Data Collection).</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,HKCU,SOFTWARE\Microsoft\Siuf\Rules,NumberOfSIUFInPeriod,0 -->
+
+    <FixprivPolicy id="90">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Siuf\\Rules">
+       <keyValue>
+         <valueName>NumberOfSIUFInPeriod</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>Microsoft Telemetry Feedback Frequency.</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\DeliveryOptimization,SystemSettingsDownloadMode,1 -->
+
+    <FixprivPolicy id="91">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\DeliveryOptimization">
+       <keyValue>
+         <valueName>SystemSettingsDownloadMode</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>Enable/Disable P2P Windows Update Download.</valueDescription>
+          <valueData>3</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,HKCU,SOFTWARE\Policies\Microsoft\MicrosoftEdge\Main,DoNotTrack,1 -->
+
+    <FixprivPolicy id="92">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Policies\\Microsoft\\MicrosoftEdge\\Main">
+       <keyValue>
+         <valueName>DoNotTrack</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>Microsoft Edge Browser - send Do Not Track Header.</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,HKCU,SOFTWARE\Policies\Microsoft\MicrosoftEdge\PhishingFilter,EnabledV9,0 -->
+
+    <FixprivPolicy id="93">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Policies\\Microsoft\\MicrosoftEdge\\PhishingFilter">
+       <keyValue>
+         <valueName>EnabledV9</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>Microsoft Edge Smartscreen Phishing Filter.</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <FixprivPolicy id="94">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Search">
+       <keyValue>
+         <valueName>HistoryViewEnabled</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>Cortana displays history.</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+    
+    <FixprivPolicy id="95">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Search">
+       <keyValue>
+         <valueName>DeviceHistoryEnabled</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>Cortana can use my device history.</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+     <!-- REG_DWORD,HKCU,SOFTWARE\Microsoft\Internet Explorer\Geolocation,BlockAllWebsites,1 -->
+
+    <FixprivPolicy id="96">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Internet Explorer\\Geolocation">
+       <keyValue>
+         <valueName>BlockAllWebsites</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>Enable/Disable Geolocation in IE browser.</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_SZ,HKCU,SOFTWARE\Microsoft\Internet Explorer\Main,Use FormSuggest,no -->
+
+    <FixprivPolicy id="97">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Internet Explorer\\Main">
+       <keyValue>
+         <valueName>Use FormSuggest</valueName>
+          <valueType>REG_SZ</valueType>
+          <valueMode>POL_WSTRING</valueMode>
+          <valueDescription>Autocomplete/Suggestions for IE form inputs.</valueDescription>
+          <valueData>no</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_SZ,HKCU,SOFTWARE\Microsoft\Internet Explorer\Main,FormSuggest Passwords,no -->
+
+    <FixprivPolicy id="98">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Internet Explorer\\Main">
+       <keyValue>
+         <valueName>FormSuggest Passwords</valueName>
+          <valueType>REG_SZ</valueType>
+          <valueMode>POL_WSTRING</valueMode>
+          <valueDescription>Autocomplete/Suggestions for IE passwords.</valueDescription>
+          <valueData>no</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,HKCU,SOFTWARE\Microsoft\Internet Explorer\DomainSuggestion,Enabled,0 -->
+
+    <FixprivPolicy id="99">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Internet Explorer\\DomainSuggestion">
+       <keyValue>
+         <valueName>Enabled</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>IE URL suggestions.</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,HKCU,SOFTWARE\Microsoft\Internet Explorer\Main\WindowsSearch,EnabledScopes,0 -->
+
+    <FixprivPolicy id="100">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Internet Explorer\\Main\\WindowsSearch">
+       <keyValue>
+         <valueName>EnabledScopes</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>Autocomplete for IE form values.</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,HKCU,SOFTWARE\Microsoft\Internet Explorer\Main\WindowsSearch,AutoCompleteGroups,0 -->
+
+    <FixprivPolicy id="101">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Internet Explorer\\Main\\WindowsSearch">
+       <keyValue>
+         <valueName>AutoCompleteGroups</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>Autocomplete for IE form values.</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,HKCU,SOFTWARE\Microsoft\Internet Explorer\Feed Discovery,Enabled,0 -->
+
+    <FixprivPolicy id="102">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Internet Explorer\\Feed Discovery">
+       <keyValue>
+         <valueName>Enabled</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>Automatic RSS Feed Discovery.</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,HKCU,SOFTWARE\Microsoft\Internet Explorer\Feeds,TurnOffOPV,1 -->
+
+    <FixprivPolicy id="103">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Internet Explorer\\Feeds">
+       <keyValue>
+         <valueName>TurnOffOPV</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>Enable/disable IE feed reading view.</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,HKCU,SOFTWARE\Microsoft\Feeds,SyncStatus,0 -->
+
+    <FixprivPolicy id="104">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Feeds">
+       <keyValue>
+         <valueName>SyncStatus</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>Enable/Disable Windows Sidebar RSS Download Engine.</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,HKCU,SOFTWARE\Microsoft\Internet Explorer\Privacy,ClearBrowsingHistoryOnExit,1 -->
+
+    <FixprivPolicy id="105">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Internet Explorer\\Privacy">
+       <keyValue>
+         <valueName>ClearBrowsingHistoryOnExit</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>Clear Internet Explorer history on exit.</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <FixprivPolicy id="106">
+      <key keyRoot="HKLM" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\DeliveryOptimization\\Config">
+       <keyValue>
+         <valueName>DODownloadMode</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>Windows Update P2P Delivery optimization</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+    
+
+    <!-- REG_DWORD,HKLM,SOFTWARE\Microsoft\Windows Defender\Spynet,SpyNetReporting,0 -->
+
+    <FixprivPolicy id="107">
+      <key keyRoot="HKLM" keyName="SOFTWARE\\Microsoft\\Windows Defender\\Spynet">
+       <keyValue>
+         <valueName>SpyNetReporting</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription> Windows Defender SpyNet reporting.</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,HKLM,SOFTWARE\Microsoft\Windows Defender\Spynet,SubmitSamplesConsent,0 -->
+
+    <FixprivPolicy id="108">
+      <key keyRoot="HKLM" keyName="SOFTWARE\\Microsoft\\Windows Defender\\Spynet">
+       <keyValue>
+         <valueName>SubmitSamplesConsent</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>Allow Windows Defender to send samples of suspicious files to Microsoft.</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <FixprivPolicy id="109">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Search">
+       <keyValue>
+         <valueName>CortanaEnabled</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>Enable Cortana.</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+    
+    <FixprivPolicy id="110">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\Windows\\OneDrive">
+       <keyValue>
+         <valueName>DisableMeteredNetworkFileSync</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>This policy setting lets you prevent apps and features from working with files on OneDrive via Metered Network Connections.</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+    
+    <FixprivPolicy id="111">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Wow6432Node\\Policies\\Microsoft\\Windows\\OneDrive">
+       <keyValue>
+         <valueName>DisableMeteredNetworkFileSync</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>This policy setting lets you prevent apps and features from working with files on OneDrive via Metered Network Connections.</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+    
+        <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\Windows\OneDrive,DisableLibrariesDefaultSaveToOneDrive,1 -->
+
+    <FixprivPolicy id="112">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Wow6432Node\\Policies\\Microsoft\\Windows\\OneDrive">
+       <keyValue>
+         <valueName>DisableLibrariesDefaultSaveToOneDrive</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>Disable libraries to save to OneDrive by default.</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\Windows\OneDrive,DisableFileSyncNGSC,1 -->
+
+    <FixprivPolicy id="113">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Wow6432Node\\Policies\\Microsoft\\Windows\\OneDrive">
+       <keyValue>
+         <valueName>DisableFileSyncNGSC</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription> This policy setting lets you prevent apps and features from working with files on OneDrive.If you enable this policy setting:* Users can't access OneDrive from the OneDrive app and file picker.* Windows Store apps can't access OneDrive using the WinRT API.* OneDrive doesn't appear in the navigation pane in File Explorer.* OneDrive files aren't kept in sync with the cloud.* Users can't automatically upload photos and videos from the camera roll folder.If you disable or do not configure this policy setting apps and features can work with OneDrive file storage.</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\Windows\OneDrive,DisableFileSync,1 -->
+
+    <FixprivPolicy id="114">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Wow6432Node\\Policies\\Microsoft\\Windows\\OneDrive">
+       <keyValue>
+         <valueName>DisableFileSync</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription> This policy setting lets you prevent apps and features from working with files on OneDrive.If you enable this policy setting:* Users can't access OneDrive from the OneDrive app and file picker.* Windows Store apps can't access OneDrive using the WinRT API.* OneDrive doesn't appear in the navigation pane in File Explorer.* OneDrive files aren't kept in sync with the cloud.* Users can't automatically upload photos and videos from the camera roll folder.If you disable or do not configure this policy setting apps and features can work with OneDrive file storage.</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+      
+    <!-- REG_SZ,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\DeviceAccess\Global\{7D7E8402-7C54-4821-A34E-AEEFD62DED93},Value,Deny -->
+
+    <FixprivPolicy id="115">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\DeviceAccess\\Global\\{7D7E8402-7C54-4821-A34E-AEEFD62DED93}">
+       <keyValue>
+         <valueName>Value</valueName>
+          <valueType>REG_SZ</valueType>
+          <valueMode>POL_WSTRING</valueMode>
+          <valueDescription>Let apps access my contacts.</valueDescription>
+          <valueData>Deny</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- GAP -->
+
+
+    <!-- REG_SZ,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\DeviceAccess\Global\LooselyCoupled,Value,Deny -->
+
+    <FixprivPolicy id="121">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\DeviceAccess\\Global\\LooselyCoupled">
+       <keyValue>
+         <valueName>Value</valueName>
+          <valueType>REG_SZ</valueType>
+          <valueMode>POL_WSTRING</valueMode>
+          <valueDescription>Let your apps automatically share and sync info with wireless devices tat don't explicitly pair with your PC, tablet or phone.</valueDescription>
+          <valueData>Deny</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DELETE,HKCU,SOFTWARE\Microsoft\Siuf\Rules,PeriodInNanoSeconds, -->
+
+    <FixprivPolicy id="122">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Siuf\\Rules">
+       <keyValue>
+         <valueName>PeriodInNanoSeconds</valueName>
+          <valueType>REG_DELETE</valueType>
+          <valueMode>POL_DELETE</valueMode>
+          <valueDescription>Windows Feedback Frequency.</valueDescription>
+          <valueData></valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <!-- REG_DWORD,HKCU,SOFTWARE\Microsoft\Input\TIPC,Enabled,0 -->
+
+    <FixprivPolicy id="124">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Input\\TIPC">
+       <keyValue>
+         <valueName>Enabled</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>Send Microsoft info about how i write.</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+    <FixprivPolicy id="127">
+      <key keyRoot="HKLM" keyName="System\\CurrentControlSet\\Services">
+       <keyValue>
+         <valueName>wlidsvc</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>Prevent communication to the Microsoft Account cloud authentication service. Many apps and system components that depend on Microsoft Account authentication may lose functionality. </valueDescription>
+          <valueData>4</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+    
+  </rules>
+</FixprivPolicies>

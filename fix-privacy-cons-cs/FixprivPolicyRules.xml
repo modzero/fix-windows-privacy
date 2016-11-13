@@ -1,0 +1,1738 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FixprivPolicies xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <rules>
+
+
+    <!-- REG_DWORD,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\AppHost,EnableWebContentEvaluation,0 -->
+
+
+    <FixprivPolicy id="0">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppHost">
+       <keyValue>
+         <valueName>EnableWebContentEvaluation</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,HKCU,Control Panel\International\User Profile,HttpAcceptLanguageOptOut,1 -->
+
+
+    <FixprivPolicy id="1">
+      <key keyRoot="HKCU" keyName="Control Panel\\International\\User Profile">
+       <keyValue>
+         <valueName>HttpAcceptLanguageOptOut</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_SZ,HKCU,SOFTWARE\Microsoft\Internet Explorer\International,AcceptLanguage, -->
+
+
+    <FixprivPolicy id="2">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Internet Explorer\\International">
+       <keyValue>
+         <valueName>AcceptLanguage</valueName>
+          <valueType>REG_SZ</valueType>
+          <valueMode>POL_WSTRING</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData></valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_SZ,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\DeviceAccess\Global\{E6AD100E-5F4E-44CD-BE0F-2265D88D14F5},Value,Deny -->
+
+
+    <FixprivPolicy id="3">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\DeviceAccess\\Global\\{E6AD100E-5F4E-44CD-BE0F-2265D88D14F5}">
+       <keyValue>
+         <valueName>Value</valueName>
+          <valueType>REG_SZ</valueType>
+          <valueMode>POL_WSTRING</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>Deny</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_SZ,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\DeviceAccess\Global\{52079E78-A92B-413F-B213-E8FE35712E72},Value,Deny -->
+
+
+    <FixprivPolicy id="4">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\DeviceAccess\\Global\\{52079E78-A92B-413F-B213-E8FE35712E72}">
+       <keyValue>
+         <valueName>Value</valueName>
+          <valueType>REG_SZ</valueType>
+          <valueMode>POL_WSTRING</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>Deny</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,HKCU,SOFTWARE\Microsoft\Personalization\Settings,AcceptedPrivacyPolicy,0 -->
+
+
+    <FixprivPolicy id="5">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Personalization\\Settings">
+       <keyValue>
+         <valueName>AcceptedPrivacyPolicy</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\SettingSync\Groups\Language,Enabled,0 -->
+
+
+    <FixprivPolicy id="6">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\SettingSync\\Groups\\Language">
+       <keyValue>
+         <valueName>Enabled</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,HKCU,SOFTWARE\Microsoft\InputPersonalization,RestrictImplicitTextCollection,1 -->
+
+
+    <FixprivPolicy id="7">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\InputPersonalization">
+       <keyValue>
+         <valueName>RestrictImplicitTextCollection</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,HKCU,SOFTWARE\Microsoft\InputPersonalization,RestrictImplicitInkCollection,1 -->
+
+
+    <FixprivPolicy id="8">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\InputPersonalization">
+       <keyValue>
+         <valueName>RestrictImplicitInkCollection</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,HKCU,SOFTWARE\Microsoft\InputPersonalization\TrainedDataStore,HarvestContacts,0 -->
+
+
+    <FixprivPolicy id="9">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\InputPersonalization\\TrainedDataStore">
+       <keyValue>
+         <valueName>HarvestContacts</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_SZ,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\Search,CortanaMUID,MUID=bc6c9f905afb4a01a748197238147f73 -->
+
+
+    <FixprivPolicy id="10">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Search">
+       <keyValue>
+         <valueName>CortanaMUID</valueName>
+          <valueType>REG_SZ</valueType>
+          <valueMode>POL_WSTRING</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>MUID=bc6c9f905afb4a01a748197238147f73</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_SZ,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\DeviceAccess\Global\{C1D23ACC-752B-43E5-8448-8D0E519CD6D6},Value,Deny -->
+
+
+    <FixprivPolicy id="11">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\DeviceAccess\\Global\\{C1D23ACC-752B-43E5-8448-8D0E519CD6D6}">
+       <keyValue>
+         <valueName>Value</valueName>
+          <valueType>REG_SZ</valueType>
+          <valueMode>POL_WSTRING</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>Deny</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_SZ,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\DeviceAccess\S-1-15-2-1239072475-3687740317-1842961305-3395936705-4023953123-1525404051-2779347315\{7D7E8402-7C54-4821-A34E-AEEFD62DED93},Value,Deny -->
+
+
+    <FixprivPolicy id="12">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\DeviceAccess\\S-1-15-2-1239072475-3687740317-1842961305-3395936705-4023953123-1525404051-2779347315\\{7D7E8402-7C54-4821-A34E-AEEFD62DED93}">
+       <keyValue>
+         <valueName>Value</valueName>
+          <valueType>REG_SZ</valueType>
+          <valueMode>POL_WSTRING</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>Deny</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_SZ,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\DeviceAccess\S-1-15-2-1063257880-1914585122-1954150059-946145533-116938067-416079064-1690466945\{7D7E8402-7C54-4821-A34E-AEEFD62DED93},Value,Deny -->
+
+
+    <FixprivPolicy id="13">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\DeviceAccess\\S-1-15-2-1063257880-1914585122-1954150059-946145533-116938067-416079064-1690466945\\{7D7E8402-7C54-4821-A34E-AEEFD62DED93}">
+       <keyValue>
+         <valueName>Value</valueName>
+          <valueType>REG_SZ</valueType>
+          <valueMode>POL_WSTRING</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>Deny</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_SZ,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\DeviceAccess\Global\{D89823BA-7180-4B81-B50C-7E471E6121A3},Value,Deny -->
+
+
+    <FixprivPolicy id="14">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\DeviceAccess\\Global\\{D89823BA-7180-4B81-B50C-7E471E6121A3}">
+       <keyValue>
+         <valueName>Value</valueName>
+          <valueType>REG_SZ</valueType>
+          <valueMode>POL_WSTRING</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>Deny</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_SZ,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\DeviceAccess\Global\{8BC668CF-7728-45BD-93F8-CF2B3B41D7AB},Value,Deny -->
+
+
+    <FixprivPolicy id="15">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\DeviceAccess\\Global\\{8BC668CF-7728-45BD-93F8-CF2B3B41D7AB}">
+       <keyValue>
+         <valueName>Value</valueName>
+          <valueType>REG_SZ</valueType>
+          <valueMode>POL_WSTRING</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>Deny</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_SZ,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\DeviceAccess\Global\{9231CB4C-BF57-4AF3-8C55-FDA7BFCC04C5},Value,Deny -->
+
+
+    <FixprivPolicy id="16">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\DeviceAccess\\Global\\{9231CB4C-BF57-4AF3-8C55-FDA7BFCC04C5}">
+       <keyValue>
+         <valueName>Value</valueName>
+          <valueType>REG_SZ</valueType>
+          <valueMode>POL_WSTRING</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>Deny</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_SZ,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\DeviceAccess\Global\{992AFA70-6F47-4148-B3E9-3003349C1548},Value,Deny -->
+
+
+    <FixprivPolicy id="17">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\DeviceAccess\\Global\\{992AFA70-6F47-4148-B3E9-3003349C1548}">
+       <keyValue>
+         <valueName>Value</valueName>
+          <valueType>REG_SZ</valueType>
+          <valueMode>POL_WSTRING</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>Deny</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_SZ,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\DeviceAccess\Global\{21157C1F-2651-4CC1-90CA-1F28B02263F6},Value,Deny -->
+
+
+    <FixprivPolicy id="18">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\DeviceAccess\\Global\\{21157C1F-2651-4CC1-90CA-1F28B02263F6}">
+       <keyValue>
+         <valueName>Value</valueName>
+          <valueType>REG_SZ</valueType>
+          <valueMode>POL_WSTRING</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>Deny</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_SZ,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\DeviceAccess\Global\{A8804298-2D5F-42E3-9531-9C8C39EB29CE},Value,Deny -->
+
+
+    <FixprivPolicy id="19">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\DeviceAccess\\Global\\{A8804298-2D5F-42E3-9531-9C8C39EB29CE}">
+       <keyValue>
+         <valueName>Value</valueName>
+          <valueType>REG_SZ</valueType>
+          <valueMode>POL_WSTRING</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>Deny</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_SZ,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\DeviceAccess\Global\{BFA794E4-F964-4FDB-90F6-51056BFE4B44},Value,Deny -->
+
+
+    <FixprivPolicy id="20">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\DeviceAccess\\Global\\{BFA794E4-F964-4FDB-90F6-51056BFE4B44}">
+       <keyValue>
+         <valueName>Value</valueName>
+          <valueType>REG_SZ</valueType>
+          <valueMode>POL_WSTRING</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>Deny</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_SZ,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\DeviceAccess\Global\{E5323777-F976-4f5b-9B55-B94699C46E44},Value,Deny -->
+
+
+    <FixprivPolicy id="21">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\DeviceAccess\\Global\\{E5323777-F976-4f5b-9B55-B94699C46E44}">
+       <keyValue>
+         <valueName>Value</valueName>
+          <valueType>REG_SZ</valueType>
+          <valueMode>POL_WSTRING</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>Deny</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_SZ,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\DeviceAccess\Global\{2EEF81BE-33FA-4800-9670-1CD474972C3F},Value,Deny -->
+
+
+    <FixprivPolicy id="22">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\DeviceAccess\\Global\\{2EEF81BE-33FA-4800-9670-1CD474972C3F}">
+       <keyValue>
+         <valueName>Value</valueName>
+          <valueType>REG_SZ</valueType>
+          <valueMode>POL_WSTRING</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>Deny</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_SZ,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\DeviceAccess\Global\{7D7E8402-7C54-4821-A34E-AEEFD62DED93},Value,Deny -->
+
+
+    <FixprivPolicy id="23">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\DeviceAccess\\Global\\{7D7E8402-7C54-4821-A34E-AEEFD62DED93}">
+       <keyValue>
+         <valueName>Value</valueName>
+          <valueType>REG_SZ</valueType>
+          <valueMode>POL_WSTRING</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>Deny</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_SZ,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\DeviceAccess\Global\LooselyCoupled,Value,Deny -->
+
+
+    <FixprivPolicy id="24">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\DeviceAccess\\Global\\LooselyCoupled">
+       <keyValue>
+         <valueName>Value</valueName>
+          <valueType>REG_SZ</valueType>
+          <valueMode>POL_WSTRING</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>Deny</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,HKCU,SOFTWARE\Microsoft\Siuf\Rules,NumberOfSIUFInPeriod,0 -->
+
+
+    <FixprivPolicy id="25">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Siuf\\Rules">
+       <keyValue>
+         <valueName>NumberOfSIUFInPeriod</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DELETE,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Connections,SavedLegacySettings,0 -->
+
+
+    <FixprivPolicy id="26">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections">
+       <keyValue>
+         <valueName>SavedLegacySettings</valueName>
+          <valueType>REG_DELETE</valueType>
+          <valueMode>POL_DELETE</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DELETE,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Connections,DefaultConnectionSettings,0 -->
+
+
+    <FixprivPolicy id="27">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections">
+       <keyValue>
+         <valueName>DefaultConnectionSettings</valueName>
+          <valueType>REG_DELETE</valueType>
+          <valueMode>POL_DELETE</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings,ProxyEnable,0 -->
+
+
+    <FixprivPolicy id="28">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Internet Settings">
+       <keyValue>
+         <valueName>ProxyEnable</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_SZ,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings,ProxyOverride,*.local -->
+
+
+    <FixprivPolicy id="29">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Internet Settings">
+       <keyValue>
+         <valueName>ProxyOverride</valueName>
+          <valueType>REG_SZ</valueType>
+          <valueMode>POL_WSTRING</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>*.local</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_SZ,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings,ProxyServer, -->
+
+
+    <FixprivPolicy id="30">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Internet Settings">
+       <keyValue>
+         <valueName>ProxyServer</valueName>
+          <valueType>REG_SZ</valueType>
+          <valueMode>POL_WSTRING</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData></valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DELETE,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings,AutoConfigURL,0 -->
+
+
+    <FixprivPolicy id="31">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Internet Settings">
+       <keyValue>
+         <valueName>AutoConfigURL</valueName>
+          <valueType>REG_DELETE</valueType>
+          <valueMode>POL_DELETE</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DELETE,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings,AutoDetect,0 -->
+
+
+    <FixprivPolicy id="32">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Internet Settings">
+       <keyValue>
+         <valueName>AutoDetect</valueName>
+          <valueType>REG_DELETE</valueType>
+          <valueMode>POL_DELETE</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DELETE,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings,ProxyServer,0 -->
+
+
+    <FixprivPolicy id="33">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Internet Settings">
+       <keyValue>
+         <valueName>ProxyServer</valueName>
+          <valueType>REG_DELETE</valueType>
+          <valueMode>POL_DELETE</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\AdvertisingInfo,Enabled,0 -->
+
+
+    <FixprivPolicy id="34">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AdvertisingInfo">
+       <keyValue>
+         <valueName>Enabled</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_SZ,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\AdvertisingInfo,Id,Noooooo! -->
+
+
+    <FixprivPolicy id="35">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AdvertisingInfo">
+       <keyValue>
+         <valueName>Id</valueName>
+          <valueType>REG_SZ</valueType>
+          <valueMode>POL_WSTRING</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>Noooooo!</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System,DisableShutdownNamedPipe,1 -->
+
+
+    <FixprivPolicy id="36">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System">
+       <keyValue>
+         <valueName>DisableShutdownNamedPipe</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\FVE,UseAdvancedStartup,1 -->
+
+
+    <FixprivPolicy id="37">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\FVE">
+       <keyValue>
+         <valueName>UseAdvancedStartup</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\FVE,EnableBDEWithNoTPM,1 -->
+
+
+    <FixprivPolicy id="38">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\FVE">
+       <keyValue>
+         <valueName>EnableBDEWithNoTPM</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\FVE,UseTPM,2 -->
+
+
+    <FixprivPolicy id="39">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\FVE">
+       <keyValue>
+         <valueName>UseTPM</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>2</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\FVE,UseTPMPIN,2 -->
+
+
+    <FixprivPolicy id="40">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\FVE">
+       <keyValue>
+         <valueName>UseTPMPIN</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>2</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\FVE,UseTPMKey,2 -->
+
+
+    <FixprivPolicy id="41">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\FVE">
+       <keyValue>
+         <valueName>UseTPMKey</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>2</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\FVE,UseTPMKeyPIN,2 -->
+
+
+    <FixprivPolicy id="42">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\FVE">
+       <keyValue>
+         <valueName>UseTPMKeyPIN</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>2</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\FVE,UseEnhancedPin,1 -->
+
+
+    <FixprivPolicy id="43">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\FVE">
+       <keyValue>
+         <valueName>UseEnhancedPin</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\FVE,RDVConfigureBDE,1 -->
+
+
+    <FixprivPolicy id="44">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\FVE">
+       <keyValue>
+         <valueName>RDVConfigureBDE</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\FVE,RDVAllowBDE,1 -->
+
+
+    <FixprivPolicy id="45">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\FVE">
+       <keyValue>
+         <valueName>RDVAllowBDE</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\FVE,RDVDisableBDE,1 -->
+
+
+    <FixprivPolicy id="46">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\FVE">
+       <keyValue>
+         <valueName>RDVDisableBDE</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\FVE,RDVDenyCrossOrg,0 -->
+
+
+    <FixprivPolicy id="47">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\FVE">
+       <keyValue>
+         <valueName>RDVDenyCrossOrg</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\FVE,RDVHardwareEncryption,1 -->
+
+
+    <FixprivPolicy id="48">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\FVE">
+       <keyValue>
+         <valueName>RDVHardwareEncryption</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\FVE,RDVAllowSoftwareEncryptionFailover,1 -->
+
+
+    <FixprivPolicy id="49">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\FVE">
+       <keyValue>
+         <valueName>RDVAllowSoftwareEncryptionFailover</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\FVE,RDVRestrictHardwareEncryptionAlgorithms,0 -->
+
+
+    <FixprivPolicy id="50">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\FVE">
+       <keyValue>
+         <valueName>RDVRestrictHardwareEncryptionAlgorithms</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\FVE,RDVPassphrase,1 -->
+
+
+    <FixprivPolicy id="51">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\FVE">
+       <keyValue>
+         <valueName>RDVPassphrase</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\FVE,RDVEnforcePassphrase,0 -->
+
+
+    <FixprivPolicy id="52">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\FVE">
+       <keyValue>
+         <valueName>RDVEnforcePassphrase</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\FVE,RDVPassphraseComplexity,2 -->
+
+
+    <FixprivPolicy id="53">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\FVE">
+       <keyValue>
+         <valueName>RDVPassphraseComplexity</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>2</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\FVE,RDVPassphraseLength,8 -->
+
+
+    <FixprivPolicy id="54">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\FVE">
+       <keyValue>
+         <valueName>RDVPassphraseLength</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>8</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\FVE,RDVRecovery,1 -->
+
+
+    <FixprivPolicy id="55">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\FVE">
+       <keyValue>
+         <valueName>RDVRecovery</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\FVE,RDVManageDRA,1 -->
+
+
+    <FixprivPolicy id="56">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\FVE">
+       <keyValue>
+         <valueName>RDVManageDRA</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\FVE,RDVRecoveryPassword,2 -->
+
+
+    <FixprivPolicy id="57">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\FVE">
+       <keyValue>
+         <valueName>RDVRecoveryPassword</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>2</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\FVE,RDVRecoveryKey,2 -->
+
+
+    <FixprivPolicy id="58">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\FVE">
+       <keyValue>
+         <valueName>RDVRecoveryKey</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>2</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\FVE,RDVHideRecoveryPage,0 -->
+
+
+    <FixprivPolicy id="59">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\FVE">
+       <keyValue>
+         <valueName>RDVHideRecoveryPage</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\FVE,RDVActiveDirectoryBackup,1 -->
+
+
+    <FixprivPolicy id="60">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\FVE">
+       <keyValue>
+         <valueName>RDVActiveDirectoryBackup</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\FVE,RDVActiveDirectoryInfoToStore,1 -->
+
+
+    <FixprivPolicy id="61">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\FVE">
+       <keyValue>
+         <valueName>RDVActiveDirectoryInfoToStore</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\FVE,RDVRequireActiveDirectoryBackup,0 -->
+
+
+    <FixprivPolicy id="62">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\FVE">
+       <keyValue>
+         <valueName>RDVRequireActiveDirectoryBackup</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\PassportForWork\PINComplexity,Digits,1 -->
+
+
+    <FixprivPolicy id="63">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\PassportForWork\\PINComplexity">
+       <keyValue>
+         <valueName>Digits</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\PassportForWork\PINComplexity,LowercaseLetters,1 -->
+
+
+    <FixprivPolicy id="64">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\PassportForWork\\PINComplexity">
+       <keyValue>
+         <valueName>LowercaseLetters</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\PassportForWork\PINComplexity,SpecialCharacters,1 -->
+
+
+    <FixprivPolicy id="65">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\PassportForWork\\PINComplexity">
+       <keyValue>
+         <valueName>SpecialCharacters</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\PassportForWork\PINComplexity,UppercaseLetters,1 -->
+
+
+    <FixprivPolicy id="66">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\PassportForWork\\PINComplexity">
+       <keyValue>
+         <valueName>UppercaseLetters</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\Windows\HotspotAuthentication,Enabled,0 -->
+
+
+    <FixprivPolicy id="67">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\Windows\\HotspotAuthentication">
+       <keyValue>
+         <valueName>Enabled</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\Windows\OneDrive,DisableLibrariesDefaultSaveToOneDrive,0 -->
+
+
+    <FixprivPolicy id="68">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\Windows\\OneDrive">
+       <keyValue>
+         <valueName>DisableLibrariesDefaultSaveToOneDrive</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\Windows\OneDrive,DisableFileSyncNGSC,1 -->
+
+
+    <FixprivPolicy id="69">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\Windows\\OneDrive">
+       <keyValue>
+         <valueName>DisableFileSyncNGSC</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\Windows\OneDrive,DisableFileSync,1 -->
+
+
+    <FixprivPolicy id="70">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\Windows\\OneDrive">
+       <keyValue>
+         <valueName>DisableFileSync</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\Windows\Windows Search,AllowCortana,0 -->
+
+
+    <FixprivPolicy id="71">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search">
+       <keyValue>
+         <valueName>AllowCortana</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\Windows\Windows Search,AllowCortanaAboveLock,0 -->
+
+
+    <FixprivPolicy id="72">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search">
+       <keyValue>
+         <valueName>AllowCortanaAboveLock</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\Windows\Windows Search,AllowIndexingEncryptedStoresOrItems,0 -->
+
+
+    <FixprivPolicy id="73">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search">
+       <keyValue>
+         <valueName>AllowIndexingEncryptedStoresOrItems</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\Windows\Windows Search,AllowSearchToUseLocation,0 -->
+
+
+    <FixprivPolicy id="74">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search">
+       <keyValue>
+         <valueName>AllowSearchToUseLocation</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\Windows\Windows Search,ConnectedSearchUseWeb,0 -->
+
+
+    <FixprivPolicy id="75">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search">
+       <keyValue>
+         <valueName>ConnectedSearchUseWeb</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\Windows\Windows Search,PreventIndexingEmailAttachments,1 -->
+
+
+    <FixprivPolicy id="76">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search">
+       <keyValue>
+         <valueName>PreventIndexingEmailAttachments</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\Windows\Windows Search,PreventIndexingOfflineFiles,1 -->
+
+
+    <FixprivPolicy id="77">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search">
+       <keyValue>
+         <valueName>PreventIndexingOfflineFiles</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\Windows\Windows Search,PreventIndexingOutlook,1 -->
+
+
+    <FixprivPolicy id="78">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search">
+       <keyValue>
+         <valueName>PreventIndexingOutlook</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\Windows\Windows Search,PreventIndexingPublicFolders,1 -->
+
+
+    <FixprivPolicy id="79">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search">
+       <keyValue>
+         <valueName>PreventIndexingPublicFolders</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\Windows\WinRM\Service\WinRS,AllowRemoteShellAccess,0 -->
+
+
+    <FixprivPolicy id="80">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\Windows\\WinRM\\Service\\WinRS">
+       <keyValue>
+         <valueName>AllowRemoteShellAccess</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,GPOM,System\CurrentControlSet\Policies\Microsoft\FVE,RDVDenyWriteAccess,0 -->
+
+
+    <FixprivPolicy id="81">
+      <key keyRoot="GPOM" keyName="System\\CurrentControlSet\\Policies\\Microsoft\\FVE">
+       <keyValue>
+         <valueName>RDVDenyWriteAccess</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_SZ,GPOM,SOFTWARE\Policies\Microsoft\FVE,RDVAllowedHardwareEncryptionAlgorithms,2.16.840.1.101.3.4.1.2;2.16.840.1.101.3.4.1.42 -->
+
+
+    <FixprivPolicy id="82">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\FVE">
+       <keyValue>
+         <valueName>RDVAllowedHardwareEncryptionAlgorithms</valueName>
+          <valueType>REG_SZ</valueType>
+          <valueMode>POL_WSTRING</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>2.16.840.1.101.3.4.1.2;2.16.840.1.101.3.4.1.42</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,GPOM,SOFTWARE\Policies\Microsoft\Windows\AppPrivacy,LetAppsAccessCallHistory,2 -->
+
+
+    <FixprivPolicy id="83">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\Windows\\AppPrivacy">
+       <keyValue>
+         <valueName>LetAppsAccessCallHistory</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>2</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DISABLE,GPOM,SOFTWARE\Policies\Microsoft\Windows\DataCollection,AllowTelemetry, -->
+
+
+    <FixprivPolicy id="84">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\Windows\\DataCollection">
+       <keyValue>
+         <valueName>AllowTelemetry</valueName>
+          <valueType>REG_DISABLE</valueType>
+          <valueMode>POL_DISABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData></valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DELETE,GPOM,SOFTWARE\Policies\Microsoft\PassportForWork\PINComplexity,History, -->
+
+
+    <FixprivPolicy id="85">
+      <key keyRoot="GPOM" keyName="SOFTWARE\\Policies\\Microsoft\\PassportForWork\\PINComplexity">
+       <keyValue>
+         <valueName>History</valueName>
+          <valueType>REG_DELETE</valueType>
+          <valueMode>POL_DELETE</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData></valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,GPOM,System\CurrentControlSet\Policies,NtfsEncryptPagingFile,1 -->
+
+
+    <FixprivPolicy id="86">
+      <key keyRoot="GPOM" keyName="System\\CurrentControlSet\\Policies">
+       <keyValue>
+         <valueName>NtfsEncryptPagingFile</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,HKCU,SOFTWARE\Microsoft\Input\TIPC,Enabled,0 -->
+
+
+    <FixprivPolicy id="87">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Input\\TIPC">
+       <keyValue>
+         <valueName>Enabled</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\SmartGlass,UserAuthPolicy,0 -->
+
+
+    <FixprivPolicy id="88">
+      <key keyRoot="HKLM" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\SmartGlass">
+       <keyValue>
+         <valueName>UserAuthPolicy</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection,AllowTelemetry,0 -->
+
+
+    <FixprivPolicy id="89">
+      <key keyRoot="HKLM" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\DataCollection">
+       <keyValue>
+         <valueName>AllowTelemetry</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,HKCU,SOFTWARE\Microsoft\Siuf\Rules,NumberOfSIUFInPeriod,0 -->
+
+
+    <FixprivPolicy id="90">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Siuf\\Rules">
+       <keyValue>
+         <valueName>NumberOfSIUFInPeriod</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\DeliveryOptimization,SystemSettingsDownloadMode,1 -->
+
+
+    <FixprivPolicy id="91">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\DeliveryOptimization">
+       <keyValue>
+         <valueName>SystemSettingsDownloadMode</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,HKCU,SOFTWARE\Policies\Microsoft\MicrosoftEdge\Main,DoNotTrack,1 -->
+
+
+    <FixprivPolicy id="92">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Policies\\Microsoft\\MicrosoftEdge\\Main">
+       <keyValue>
+         <valueName>DoNotTrack</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,HKCU,SOFTWARE\Policies\Microsoft\MicrosoftEdge\PhishingFilter,EnabledV9,0 -->
+
+
+    <FixprivPolicy id="93">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Policies\\Microsoft\\MicrosoftEdge\\PhishingFilter">
+       <keyValue>
+         <valueName>EnabledV9</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,HKCU,SOFTWARE\Policies\Microsoft\MicrosoftEdge\Privacy,ClearBrowsingHistoryOnExit,1 -->
+
+
+    <FixprivPolicy id="94">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Policies\\Microsoft\\MicrosoftEdge\\Privacy">
+       <keyValue>
+         <valueName>ClearBrowsingHistoryOnExit</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_SZ,HKCU,SOFTWARE\Policies\Microsoft\MicrosoftEdge\Main,Use FormSuggest,no -->
+
+
+    <FixprivPolicy id="95">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Policies\\Microsoft\\MicrosoftEdge\\Main">
+       <keyValue>
+         <valueName>Use FormSuggest</valueName>
+          <valueType>REG_SZ</valueType>
+          <valueMode>POL_WSTRING</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>no</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,HKCU,SOFTWARE\Microsoft\Internet Explorer\Geolocation,BlockAllWebsites,1 -->
+
+
+    <FixprivPolicy id="96">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Internet Explorer\\Geolocation">
+       <keyValue>
+         <valueName>BlockAllWebsites</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_SZ,HKCU,SOFTWARE\Microsoft\Internet Explorer\Main,Use FormSuggest,no -->
+
+
+    <FixprivPolicy id="97">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Internet Explorer\\Main">
+       <keyValue>
+         <valueName>Use FormSuggest</valueName>
+          <valueType>REG_SZ</valueType>
+          <valueMode>POL_WSTRING</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>no</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_SZ,HKCU,SOFTWARE\Microsoft\Internet Explorer\Main\,ormSuggest Passwords,no -->
+
+
+    <FixprivPolicy id="98">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Internet Explorer\\Main\\">
+       <keyValue>
+         <valueName>ormSuggest Passwords</valueName>
+          <valueType>REG_SZ</valueType>
+          <valueMode>POL_WSTRING</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>no</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,HKCU,SOFTWARE\Microsoft\Internet Explorer\DomainSuggestion,Enabled,0 -->
+
+
+    <FixprivPolicy id="99">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Internet Explorer\\DomainSuggestion">
+       <keyValue>
+         <valueName>Enabled</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,HKCU,SOFTWARE\Microsoft\Internet Explorer\Main\WindowsSearch,EnabledScopes,0 -->
+
+
+    <FixprivPolicy id="100">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Internet Explorer\\Main\\WindowsSearch">
+       <keyValue>
+         <valueName>EnabledScopes</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,HKCU,SOFTWARE\Microsoft\Internet Explorer\Main\WindowsSearch,AutoCompleteGroups,1 -->
+
+
+    <FixprivPolicy id="101">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Internet Explorer\\Main\\WindowsSearch">
+       <keyValue>
+         <valueName>AutoCompleteGroups</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,HKCU,SOFTWARE\Microsoft\Internet Explorer\Feed Discovery,Sound,0 -->
+
+
+    <FixprivPolicy id="102">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Internet Explorer\\Feed Discovery">
+       <keyValue>
+         <valueName>Sound</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,HKCU,SOFTWARE\Microsoft\Internet Explorer\Feeds,TurnOffOPV,1 -->
+
+
+    <FixprivPolicy id="103">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Internet Explorer\\Feeds">
+       <keyValue>
+         <valueName>TurnOffOPV</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,HKCU,SOFTWARE\Microsoft\Feeds,SyncStatus,0 -->
+
+
+    <FixprivPolicy id="104">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Feeds">
+       <keyValue>
+         <valueName>SyncStatus</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+
+
+    <!-- REG_DWORD,HKCU,SOFTWARE\Microsoft\Internet Explorer\Privacy,ClearBrowsingHistoryOnExit,1 -->
+
+
+    <FixprivPolicy id="105">
+      <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Internet Explorer\\Privacy">
+       <keyValue>
+         <valueName>ClearBrowsingHistoryOnExit</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>t.b.d.</valueDescription>
+          <valueData>1</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+    
+    
+    <!-- 
+    #REG_DWORD,HKLM,SOFTWARE\Microsoft\Windows Defender\Spynet,SpyNetReporting,0
+    #REG_DWORD,HKLM,SOFTWARE\Microsoft\Windows Defender\Spynet,SubmitSamplesConsent,0
+    
+    special rules - we can't set these policies using regular programs, we need to call 
+    SystemSettingsAdminFlows.exe instead.
+    -->
+
+    <FixprivPolicy id="106">
+      <key keyRoot="HKLM" keyName="SOFTWARE\\Microsoft\\Windows Defender\\Spynet">
+       <keyValue>
+         <valueName>SpyNetReporting</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>Windows Defender Spynet Cloud</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+    
+    <FixprivPolicy id="107">
+      <key keyRoot="HKLM" keyName="SOFTWARE\\Microsoft\\Windows Defender\\Spynet">
+       <keyValue>
+         <valueName>SubmitSamplesConsent</valueName>
+          <valueType>REG_DWORD</valueType>
+          <valueMode>POL_ENABLED</valueMode>
+          <valueDescription>Windows Defender Spynet Cloud - Automatic Sample Submission</valueDescription>
+          <valueData>0</valueData>
+        </keyValue>
+      </key>
+    </FixprivPolicy>
+    
+    
+    
+    
+  </rules>
+</FixprivPolicies>

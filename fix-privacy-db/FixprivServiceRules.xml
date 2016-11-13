@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FixprivServices xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <rules>
+
+    <!-- dmwappushservice,WS_STARTUP_DELETE,WS_STATUS_STOP,, -->
+
+    <FixprivService id="1" name="dmwappushservice" >
+      <serviceDescription>WAP Push Message Routing Service: Part of Microsoft Diagnostic and Telemetry service</serviceDescription>
+      <serviceCommand>WS_STARTUP_DELETE</serviceCommand>
+      <serviceState>WS_STATUS_STOP</serviceState>
+      <servicePath></servicePath>
+      <serviceParams></serviceParams>
+    </FixprivService>
+
+    <!-- DiagTrack,WS_STARTUP_DELETE,WS_STATUS_STOP,, -->
+
+    <FixprivService id="4" name="DiagTrack" >
+      <serviceDescription>Part of Microsoft Diagnostic and Telemetry service</serviceDescription>
+      <serviceCommand>WS_STARTUP_DELETE</serviceCommand>
+      <serviceState>WS_STATUS_STOP</serviceState>
+      <servicePath></servicePath>
+      <serviceParams></serviceParams>
+    </FixprivService>
+
+    <!-- iphlpsvc,WS_STARTUP_DISABLED,WS_STATUS_STOP,, -->
+
+    <FixprivService id="6" name="iphlpsvc" >
+      <serviceDescription>Provides tunnel connectivity using IPv6 transition technologies (6to4, ISATAP, Port Proxy, and Teredo), and IP-HTTPS. If this service is stopped, the computer will not have the enhanced connectivity benefits that these technologies offer.
+      </serviceDescription>
+      <serviceCommand>WS_STARTUP_DISABLED</serviceCommand>
+      <serviceState>WS_STATUS_STOP</serviceState>
+      <servicePath></servicePath>
+      <serviceParams></serviceParams>
+    </FixprivService>
+
+    <!-- WinHttpAutoProxySvc,WS_STARTUP_DISABLED,WS_STATUS_STOP,, -->
+
+    <FixprivService id="8" name="WinHttpAutoProxySvc" >
+      <serviceDescription>WPAD: WinHTTP Web Proxy Auto-Discovery Service</serviceDescription>
+      <serviceCommand>WS_STARTUP_DISABLED</serviceCommand>
+      <serviceState>WS_STATUS_STOP</serviceState>
+      <servicePath></servicePath>
+      <serviceParams></serviceParams>
+    </FixprivService>
+
+    <!-- lfsvc,WS_STARTUP_DISABLED,WS_STATUS_STOP,, -->
+
+    <FixprivService id="10" name="lfsvc" >
+      <serviceDescription>This service monitors the current location of the system and manages geofences (a geographical location with associated events)</serviceDescription>
+      <serviceCommand>WS_STARTUP_DISABLED</serviceCommand>
+      <serviceState>WS_STATUS_STOP</serviceState>
+      <servicePath></servicePath>
+      <serviceParams></serviceParams>
+    </FixprivService>
+
+    <!-- SshBroker,WS_STARTUP_DISABLED,WS_STATUS_STOP,, -->
+
+    <FixprivService id="12" name="SshBroker" >
+      <serviceDescription>Microsoft Native SSH-Server</serviceDescription>
+      <serviceCommand>WS_STARTUP_DISABLED</serviceCommand>
+      <serviceState>WS_STATUS_STOP</serviceState>
+      <servicePath></servicePath>
+      <serviceParams></serviceParams>
+    </FixprivService>
+
+    <!-- SshProxy,WS_STARTUP_DISABLED,WS_STATUS_STOP,, -->
+
+    <FixprivService id="13" name="SshProxy" >
+      <serviceDescription>Microsoft Native SSH-Server</serviceDescription>
+      <serviceCommand>WS_STARTUP_DISABLED</serviceCommand>
+      <serviceState>WS_STATUS_STOP</serviceState>
+      <servicePath></servicePath>
+      <serviceParams></serviceParams>
+    </FixprivService>
+
+    <!-- XblAuthManager,WS_STARTUP_DISABLED,WS_STATUS_STOP,, -->
+
+    <FixprivService id="15" name="XblAuthManager" >
+      <serviceDescription>Provides authentication and authorization services for interacting with Xbox Live.</serviceDescription>
+      <serviceCommand>WS_STARTUP_DISABLED</serviceCommand>
+      <serviceState>WS_STATUS_STOP</serviceState>
+      <servicePath></servicePath>
+      <serviceParams></serviceParams>
+    </FixprivService>
+
+    <!-- XblGameSave,WS_STARTUP_DISABLED,WS_STATUS_STOP,, -->
+
+    <FixprivService id="16" name="XblGameSave" >
+      <serviceDescription>This service syncs save data for Xbox Live save enabled games. If this service is stopped, game save data will not upload to or download from Xbox Live.</serviceDescription>
+      <serviceCommand>WS_STARTUP_DISABLED</serviceCommand>
+      <serviceState>WS_STATUS_STOP</serviceState>
+      <servicePath></servicePath>
+      <serviceParams></serviceParams>
+    </FixprivService>
+
+    <!-- XboxNetApiSvc,WS_STARTUP_DISABLED,WS_STATUS_STOP,, -->
+
+    <FixprivService id="17" name="XboxNetApiSvc" >
+  <serviceDescription>Provide Windows.Networking.XboxLive Application Programming Interface</serviceDescription>
+      <serviceCommand>WS_STARTUP_DISABLED</serviceCommand>
+      <serviceState>WS_STATUS_STOP</serviceState>
+      <servicePath></servicePath>
+      <serviceParams></serviceParams>
+    </FixprivService>
+  </rules>
+</FixprivServices>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FixprivServices xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <rules>
+
+    <!-- dmwappushservice,WS_STARTUP_DELETE,WS_STATUS_STOP,, -->
+
+    <FixprivService id="1" name="dmwappushservice" >
+      <serviceDescription>t.b.d</serviceDescription>
+      <serviceCommand>WS_STARTUP_DELETE</serviceCommand>
+      <serviceState>WS_STATUS_STOP</serviceState>
+      <servicePath></servicePath>
+      <serviceParams></serviceParams>
+    </FixprivService>
+
+    <!-- DiagTrack,WS_STARTUP_DELETE,WS_STATUS_STOP,, -->
+
+    <FixprivService id="4" name="DiagTrack" >
+      <serviceDescription>t.b.d</serviceDescription>
+      <serviceCommand>WS_STARTUP_DELETE</serviceCommand>
+      <serviceState>WS_STATUS_STOP</serviceState>
+      <servicePath></servicePath>
+      <serviceParams></serviceParams>
+    </FixprivService>
+
+    <!-- iphlpsvc,WS_STARTUP_DISABLED,WS_STATUS_STOP,, -->
+
+    <FixprivService id="6" name="iphlpsvc" >
+      <serviceDescription>t.b.d</serviceDescription>
+      <serviceCommand>WS_STARTUP_DISABLED</serviceCommand>
+      <serviceState>WS_STATUS_STOP</serviceState>
+      <servicePath></servicePath>
+      <serviceParams></serviceParams>
+    </FixprivService>
+
+    <!-- WinHttpAutoProxySvc,WS_STARTUP_DISABLED,WS_STATUS_STOP,, -->
+
+    <FixprivService id="8" name="WinHttpAutoProxySvc" >
+      <serviceDescription>t.b.d</serviceDescription>
+      <serviceCommand>WS_STARTUP_DISABLED</serviceCommand>
+      <serviceState>WS_STATUS_STOP</serviceState>
+      <servicePath></servicePath>
+      <serviceParams></serviceParams>
+    </FixprivService>
+
+    <!-- lfsvc,WS_STARTUP_DISABLED,WS_STATUS_STOP,, -->
+
+    <FixprivService id="10" name="lfsvc" >
+      <serviceDescription>t.b.d</serviceDescription>
+      <serviceCommand>WS_STARTUP_DISABLED</serviceCommand>
+      <serviceState>WS_STATUS_STOP</serviceState>
+      <servicePath></servicePath>
+      <serviceParams></serviceParams>
+    </FixprivService>
+
+    <!-- SshBroker,WS_STARTUP_DISABLED,WS_STATUS_STOP,, -->
+
+    <FixprivService id="12" name="SshBroker" >
+      <serviceDescription>t.b.d</serviceDescription>
+      <serviceCommand>WS_STARTUP_DISABLED</serviceCommand>
+      <serviceState>WS_STATUS_STOP</serviceState>
+      <servicePath></servicePath>
+      <serviceParams></serviceParams>
+    </FixprivService>
+
+    <!-- SshProxy,WS_STARTUP_DISABLED,WS_STATUS_STOP,, -->
+
+    <FixprivService id="13" name="SshProxy" >
+      <serviceDescription>t.b.d</serviceDescription>
+      <serviceCommand>WS_STARTUP_DISABLED</serviceCommand>
+      <serviceState>WS_STATUS_STOP</serviceState>
+      <servicePath></servicePath>
+      <serviceParams></serviceParams>
+    </FixprivService>
+
+    <!-- XblAuthManager,WS_STARTUP_DISABLED,WS_STATUS_STOP,, -->
+
+    <FixprivService id="15" name="XblAuthManager" >
+      <serviceDescription>t.b.d</serviceDescription>
+      <serviceCommand>WS_STARTUP_DISABLED</serviceCommand>
+      <serviceState>WS_STATUS_STOP</serviceState>
+      <servicePath></servicePath>
+      <serviceParams></serviceParams>
+    </FixprivService>
+
+    <!-- XblGameSave,WS_STARTUP_DISABLED,WS_STATUS_STOP,, -->
+
+    <FixprivService id="16" name="XblGameSave" >
+      <serviceDescription>t.b.d</serviceDescription>
+      <serviceCommand>WS_STARTUP_DISABLED</serviceCommand>
+      <serviceState>WS_STATUS_STOP</serviceState>
+      <servicePath></servicePath>
+      <serviceParams></serviceParams>
+    </FixprivService>
+
+    <!-- XboxNetApiSvc,WS_STARTUP_DISABLED,WS_STATUS_STOP,, -->
+
+    <FixprivService id="17" name="XboxNetApiSvc" >
+      <serviceDescription>t.b.d</serviceDescription>
+      <serviceCommand>WS_STARTUP_DISABLED</serviceCommand>
+      <serviceState>WS_STATUS_STOP</serviceState>
+      <servicePath></servicePath>
+      <serviceParams></serviceParams>
+    </FixprivService>
+  </rules>
+</FixprivServices>
