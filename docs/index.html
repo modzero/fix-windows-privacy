@@ -33,7 +33,7 @@
         
      <p><img src="images/fwp-logo.png" alt="logo" /></p>
 
-        <p><u>Eine Deutsche Version befindet sich weiter unten - German version below!</u></p>
+        <p><u>Eine Deutsche Version befindet sich weiter unten - German version below</u></p>
 
         <h2 id="english-version">English Version</h2>
 
@@ -46,29 +46,32 @@
           </p>
 
           <p>
-            Over time more and more users published instructions on how to break Microsoft's habit of spying on their users, including for private users whose computers are not part of a company or enterprise domain. I was annoyed that this leads to manually clicking checkmarks on a graphical user interface or running confusing Powershell scripts and merge several single rule-sets. With the webpage <a href="https://fix10.isleaked.com/">https://fix10.isleaked.com/</a> I had the idea to build a tool, which is easily extendable and configurable and can automate the process of reaching an adequate level of privacy on the press of a button.
+            Over time more and more users published instructions on how to break Microsoft's habit of spying on their users, including for private users whose computers are not part of a company or enterprise domain. I was annoyed that this leads to manually clicking checkmarks on a graphical user interface or running confusing PowerShell scripts and merge several single rule-sets. With the webpage <a href="https://fix10.isleaked.com/">https://fix10.isleaked.com/</a> I had the idea to build a tool, which is easily extendable and configurable and can automate the process of reaching an adequate level of privacy on the press of a button.
           </p>
+          
+          <p>
+            <i>Fix Windows 10 Privacy</i> can be used via a GUI or the commandline. Right now it implements about 130 rules, which keep Windows 10 in check, regarding data protection.
+          </p>
+          
             <p>
             <img src="images/fwp-screenshot.png">
             </p>
+
           <p>
-            Fix Windows 10 Privacy can be used via a GUI or the commandline. Right now it implements about 130 rules, which keep Windows 10 in check, regarding data protection.
+            In particular, the new rules for enhanced privacy cover Windows 10 <b>Telemetry</b>: Microsoft collects <b>telemetry</b> data to identify security and reliablity issues and uses diagnostic data of the operating system to analyse and fix problems. However, data that is collected by Microsoft might probably also be used for future business cases. <b>Telemetry</b> data could contain senstive data and personally identifiable information. This is why several Windows Services are disabled by the privacy tools and policies are set, to deny the operating system to collect and send such data.
           </p>
           <p>
-            In particular, this includes Windows 10 Telemetry: Microsoft collects telemetry data to identify security and reliablity issues and uses diagnostic data of the operating system to analyse and fix problems. However, data that is collected by Microsoft might probably also be used for future business cases. Telemetry data could contain senstive data and personally identifiable information. This is why several Windows Services are disabled by the privacy tools and policies are set, to deny the operating system to collect and send such data.
+            Furthermore, several data leaks are plugged which allow third-party vendors or website owners to query sensitive information about the user. This includes but is not limited to several Web browser restrictions, to prohibit <b>telemetry</b> and &quot;more efficient advertisement&quot;.
           </p>
           <p>
-            Furthermore, several data leaks are plugged which allow third-party vendors or website owners to query sensitive information about the user. This includes but is not limited to several Web browser restrictions, to prohibit telemetry and &quot;more efficient advertisement&quot;.
-          </p>
-          <p>
-            The settings for querying geolocation data, access to caller history information, microphone etc. are configured to allow access by default within the &quot;Privacy&quot;-settings interface. Access to this information is restricted by <i>Fix Windows Privacy</i> as well, and must explicitly be enabled by the user, if access shall be granted.
+            The settings for querying <b>geolocation data</b>, access to caller history information, microphone etc. are configured to allow access by default within the &quot;Privacy&quot;-settings interface. Access to this information is restricted by <i>Fix Windows Privacy</i> as well, and must explicitly be enabled by the user, if access shall be granted.
             </p>
            <p>
-            Another breach of privacy that probably is not well known to most users is the storage of application data within the OneDrive Cloud of Microsoft or the usage of Microsofts AI assistant &quot;Cortana&quot;.
-            <i>Fix Windows Privacy</i> denies automatic storage of application data such as browser profiles in the OneDrive cloud and disables OneDrive integration on the Windows 10 operating system. Whenever storage of data in the OneDrive cloud is desired, the user must enable OneDrive again.
+            Another breach of privacy that probably is not well known to most users is the storage of application data within the <b>OneDrive</b> Cloud of Microsoft or the usage of Microsofts AI assistant &quot;<b>Cortana</b>&quot;.
+            <i>Fix Windows Privacy</i> denies automatic storage of application data such as browser profiles in the <b>OneDrive</b> cloud and disables <b>OneDrive</b> integration on the Windows 10 operating system. Whenever storage of data in the <b>OneDrive</b> cloud is desired, the user must enable <b>OneDrive</b> again.
             </p>
             <p>
-            Several changes at the Bitlocker configuration are not as relevant from a data protection point of view, but nontheless important for general protection when using Bitlocker full disc encryption. This includes for example activating the Pre Boot Authentification, so the hard drive will not be decrypted before entering the passphrase and will not be decrypted automatically when a TPM chip is used. In the default configuration Microsoft only allows digits for the passphrase. <i>Fix Windows Privacy</i> changes the Windows config to enable complex passphrases as well.
+            Several changes at the <b>Bitlocker</b> configuration are not as relevant from a data protection point of view, but nontheless important for general protection when using <b>Bitlocker</b> full disc encryption. This includes for example activating the Pre Boot Authentification, so the hard drive will not be decrypted before entering the passphrase and will not be decrypted automatically when a TPM chip is used. In the default configuration Microsoft only allows digits for the passphrase. <i>Fix Windows Privacy</i> changes the Windows config to enable complex passphrases as well.
             </p>
             <p>
             With this tool users have the possibility to check at any time (for example after updates) if any privacy relevant setting is still in the desired state. With another single click all such issues can be fixed again.
@@ -77,17 +80,17 @@
           The tool and all rules are open-sourced on <a href="https://modzero.github.io/fix-windows-privacy/">https://modzero.github.io/fix-windows-privacy/</a> and respectively <a href="https://github.com/modzero/fix-windows-privacy">https://github.com/modzero/fix-windows-privacy</a>. 
             </p>
             <p>
-            In order to extend or modify the rules, all one has to do is to edit an XML file, in which all rules are defined. It is not possible to deselect any rules in the current release of the Fix Windows 10 Privacy Tool. An editor for selectiong rules to apply is planned for a future release.
+            In order to extend or modify the rules, all one has to do is to edit an XML file, in which all rules are defined. It is not possible to deselect any rules in the current release of the <i>Fix Windows 10 Privacy</i> Tool. An editor for selectiong rules to apply is planned for a future release.
             </p>
             <p>
-            OneDrive Cloud users or users of others of the above mentioned features should refrain from using this tool at this time, because the functionality of these services will be limited or disabled after running it.
+            <b>OneDrive</b> Cloud users or users of others of the above mentioned features should refrain from using this tool at this time, because the functionality of these services will be limited or disabled after running it.
             </p>
                       
         </p>
 
         <h3 id="authors-and-contributors">Authors and Contributors</h3>
 
-        <p><i>Fix Windows Privacy</i> has been initiated by Thorsten Schr&ouml;der (<a href="https://github.com/devio">@devio</a>) of modzero in 2016.
+        <p><i>Fix Windows Privacy</i> has been initiated by Thorsten Schr&ouml;der (<a href="https://github.com/devio">on github</a>) of modzero in 2016.
         The software was inspired by the following websites:</p>
 
         <ul>
@@ -100,7 +103,7 @@
 </a></li>
         </ul>
 
-        <p>The program icon was originally created by <a href="http://www.danilodemarco.com/">http://www.danilodemarco.com/</a> and modified by <a href="https://github.com/devio">@devio</a>.</p>
+        <p>The program icon was originally created by <a href="http://www.danilodemarco.com/">http://www.danilodemarco.com/</a> and modified by <a href="https://github.com/devio">Thorsten Schr&ouml;der</a>.</p>
 
         <h3 id="license">License</h3>
 
@@ -133,29 +136,32 @@
 
           </p>
           <p>
-            Im Laufe der Zeit ver&ouml;ffentlichten mehr und mehr Benutzer Anleitungen, wie Microsoft das Ausschn&uuml;ffeln der Benutzer abgew&ouml;hnt werden kann, und zwar auch fuer Privatnutzer, deren Rechner nicht Teil einer Unternehmens-Dom&auml;ne sind. Mich hat daran nur gest&ouml;rt, dass es entweder darauf hinauslief, in einer grafischen Konfigurations-Oberfl&auml;che manuell Haken zu setzen oder auf un&uuml;bersichtliche Powershell-Scripte zur&uuml;ckzugreifen und die einzelnen Konfigurationen zusammenzuf&uuml;hren. Mit der Website https://fix10.isleaked.com/ kam mir die Idee, ein Werkzeug zu bauen, welches sich schnell erweitern und konfigurieren l&auml;sst und das auf Knopfdruck oder automatisiert ein angemessenes Niveau an Privatsph&auml;re herstellt.
+            Im Laufe der Zeit ver&ouml;ffentlichten mehr und mehr Benutzer Anleitungen, wie Microsoft das Ausschn&uuml;ffeln der Benutzer abgew&ouml;hnt werden kann, und zwar auch fuer Privatnutzer, deren Rechner nicht Teil einer Unternehmens-Dom&auml;ne sind. Mich hat daran nur gest&ouml;rt, dass es entweder darauf hinauslief, in einer grafischen Konfigurations-Oberfl&auml;che manuell Haken zu setzen oder auf un&uuml;bersichtliche PowerShell-Scripte zur&uuml;ckzugreifen und die einzelnen Konfigurationen zusammenzuf&uuml;hren. Mit der Website https://fix10.isleaked.com/ kam mir die Idee, ein Werkzeug zu bauen, welches sich schnell erweitern und konfigurieren l&auml;sst und das auf Knopfdruck oder automatisiert ein angemessenes Niveau an Privatsph&auml;re herstellt.
           </p>
+          
+          <p>
+            <i>Fix Windows 10 Privacy</i> kann &uuml;ber eine grafische Oberfl&auml;che oder ein Konsolen-Programm genutzt werden. Es setzt derzeit etwa 130 Regeln um, die Windows 10 in Sachen Datenschutz in die Schranken weisen.
+          </p>
+          
+          
           <p>
             <img src="images/fwp-screenshot.png">
           </p>
-          <p>
-            Fix Windows 10 Privacy kann &uuml;ber eine grafische Oberfl&auml;che oder ein Konsolen-Programm genutzt werden. Es setzt derzeit etwa 130 Regeln um, die Windows 10 in Sachen Datenschutz in die Schranken weisen.
-          </p>
-          <p>
 
-            Hierzu geh&ouml;rt insbesondere die Windows 10 Telemetrie:
+          <p>
+            Zu den neuen Schranken geh&ouml;rt insbesondere die Windows 10 <b>Telemetrie</b>:
             Microsoft sammelt Diagnose-Daten und Informationen &uuml;ber das Nutzerverhalten, um die eigenen Produkte verbessern zu k&ouml;nnen, im Zweifelsfall aber auch f&uuml;r sonstige wirtschaftliche Zwecke. Diese Daten k&ouml;nnen sensible Details enthalten, daher werden Windows-Dienste deaktiviert und Richtlinien gesetzt, die es dem Betriebssystem untersagen, diese Daten zu sammeln und an Microsoft zu senden.
           </p>
           <p>
 
-            Als weiterer Schritt werden zahlreiche Datenlecks gestopft, die es den Herstellern von Software oder Betreibern von Webseiten erlauben, Informationen &uuml;ber den Benutzer zu erhalten. Hierzu geh&ouml;ren strengere Web-Browser-Restriktionen, um Telemetrie und effektivere Werbung zu verbieten. Die in den Privatsph&auml;re-Einstellungen per Default auf erlaubt gesetzten Konfigurationen f&uuml;r den Zugriff auf Standortinformationen, Anrufer-Historie, Mikrofon, etc. werden ebenfalls eingeschr&auml;nkt und m&uuml;ssen dann explizit freigegeben werden.
+            Als weiterer Schritt werden zahlreiche Datenlecks gestopft, die es den Herstellern von Software oder Betreibern von Webseiten erlauben, Informationen &uuml;ber den Benutzer zu erhalten. Hierzu geh&ouml;ren strengere Web-Browser-Restriktionen, um <b>Telemetrie</b> und effektivere Werbung zu verbieten. Die in den Privatsph&auml;re-Einstellungen per Default auf erlaubt gesetzten Konfigurationen f&uuml;r den Zugriff auf <b>Standortinformationen</b>, Anrufer-Historie, Mikrofon, etc. werden ebenfalls eingeschr&auml;nkt und m&uuml;ssen dann explizit freigegeben werden.
           </p>
           <p>
-            Ein weiteres Datenleck, das den Nutzern oft zu wenig bekannt sein d&uuml;rfte, ist die Speicherung zahlreicher Daten in der OneDrive Cloud von Microsoft oder die Verwendung des KI-Assistenten Cortana. <i>Fix Windows Privacy</i> verbietet die automatische Speicherung von Anwendungsdaten wie Browser-Profilen in der Cloud und deaktiviert die OneDrive-Integration auf dem System, sodass die Speicherung von Daten in der Microsoft-Cloud nun explizit freigegeben werden muss.
+            Ein weiteres Datenleck, das den Nutzern oft zu wenig bekannt sein d&uuml;rfte, ist die Speicherung zahlreicher Daten in der <b>OneDrive</b> Cloud von Microsoft oder die Verwendung des KI-Assistenten <b>Cortana</b>. <i>Fix Windows Privacy</i> verbietet die automatische Speicherung von Anwendungsdaten wie Browser-Profilen in der Cloud und deaktiviert die <b>OneDrive</b>-Integration auf dem System, sodass die Speicherung von Daten in der Microsoft-Cloud nun explizit freigegeben werden muss.
           </p>
           <p>
 
-            Aus Datenschutz-Sicht weniger relevant, jedoch f&uuml;r das allgemeine Schutzniveau bei Nutzung der Bitlocker-Festplattenverschl&uuml;sselung f&ouml;rderlich, sind zahlreiche &Auml;nderungen an der Bitlocker-Konfiguration. Hierzu geh&ouml;rt beispielsweise die Aktivierung einer Pre-Boot-Authentifizierung, sodass die Festplatte bis zur Eingabe der Passphrase verschl&uuml;sselt bleibt und bei der Verwendung von TPM-Chips nicht automatisch entsperrt wird. In der Standard-Einstellung erlaubt Microsoft f&uuml;r das Passwort lediglich Ziffern - <i>Fix Windows Privacy</i> passt die Windows Konfiguration so an, dass auch komplexere Passphrasen erlaubt werden.
+            Aus Datenschutz-Sicht weniger relevant, jedoch f&uuml;r das allgemeine Schutzniveau bei Nutzung der <b>Bitlocker</b>-Festplattenverschl&uuml;sselung f&ouml;rderlich, sind zahlreiche &Auml;nderungen an der <b>Bitlocker</b>-Konfiguration. Hierzu geh&ouml;rt beispielsweise die Aktivierung einer Pre-Boot-Authentifizierung, sodass die Festplatte bis zur Eingabe der Passphrase verschl&uuml;sselt bleibt und bei der Verwendung von TPM-Chips nicht automatisch entsperrt wird. In der Standard-Einstellung erlaubt Microsoft f&uuml;r das Passwort lediglich Ziffern - <i>Fix Windows Privacy</i> passt die Windows Konfiguration so an, dass auch komplexere Passphrasen erlaubt werden.
           </p>
           <p>
 
@@ -166,17 +172,17 @@
             Das Werkzeug und alle Regeln sind als Open Source Projekt auf GitHub unter https://modzero.github.io/fix-windows-privacy/ bzw. https://github.com/modzero/fix-windows-privacy ver&ouml;ffentlicht.
           </p>
           <p>
-            Zur Erweiterung oder &Auml;nderung der Regeln ist es lediglich notwendig, eine XML-Datei zu editieren, in der die Regeln definiert sind. In der jetzigen Version des Fix Windows 10 Privacy Tools ist es noch nicht m&ouml;glich, einzelne Regeln auszuschlie&szlig;en  ein Editor f&uuml;r die einzelnen Regeln ist f&uuml;r eine Folgeversion geplant.
+            Zur Erweiterung oder &Auml;nderung der Regeln ist es lediglich notwendig, eine XML-Datei zu editieren, in der die Regeln definiert sind. In der jetzigen Version des <i>Fix Windows 10 Privacy</i> Tools ist es noch nicht m&ouml;glich, einzelne Regeln auszuschlie&szlig;en  ein Editor f&uuml;r die einzelnen Regeln ist f&uuml;r eine Folgeversion geplant.
           </p>
           <p>
-            Nutzer der OneDrive Cloud oder anderer oben erw&auml;hnten Features, sollten derzeit von der Benutzung des Tools absehen, da die Funktionalit&auml;t dieser Dienste anschlie&szlig;end nicht oder nur eingeschr&auml;nkt zur Verf&uuml;gung stehen.
+            Nutzer der <b>OneDrive</b> Cloud oder anderer oben erw&auml;hnten Features, sollten derzeit von der Benutzung des Tools absehen, da die Funktionalit&auml;t dieser Dienste anschlie&szlig;end nicht oder nur eingeschr&auml;nkt zur Verf&uuml;gung stehen.
           </p>
 
         </p>
 
         <h3 id="autoren-und-quellen">Autoren und Quellen</h3>
 
-        <p><i>Fix Windows Privacy</i> wurde 2016 von Thorsten Schr&ouml;der (<a href="https://github.com/devio">@devio</a>) von modzero ins Leben gerufen.</p>
+        <p><i>Fix Windows Privacy</i> wurde 2016 von Thorsten Schr&ouml;der (<a href="https://github.com/devio">github</a>) von modzero ins Leben gerufen.</p>
 
         <p>Die Software wurde von den folgenden Webseiten inspiriert:</p>
 
@@ -190,7 +196,7 @@
 </a></li>
         </ul>
 
-        <p>Das Programm-Icon wurde in der Original-Fassung von <a href="http://www.danilodemarco.com/">http://www.danilodemarco.com/</a> entworfen, und von <a href="https://github.com/devio">@devio</a> modifiziert.</p>
+        <p>Das Programm-Icon wurde in der Original-Fassung von <a href="http://www.danilodemarco.com/">http://www.danilodemarco.com/</a> entworfen, und von <a href="https://github.com/devio">Thorsten Schr&ouml;der</a> modifiziert.</p>
 
         <h3 id="lizenz">Lizenz</h3>
 
