@@ -15,12 +15,6 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_249757F7A65C499A985604217CA48C48"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_2D94956244E84B5AA4038AAFB15B6F39"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -39,6 +33,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_48217238DCCB47998BE76B964B96834C"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_4EE81A103307478C88EC140DA0D90337"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -47,24 +47,6 @@
         {
         "MsmKey" = "8:_6CA2915610C0419589C5DF8329DBDC7B"
         "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_9B92CDEABEEE42B9BF6BBC7BC6F64255"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_A9F97813CD368F08287382440AD76C14"
-        "OwnerKey" = "8:_D736203A03D2426CBBC4319E30499FDA"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_A9F97813CD368F08287382440AD76C14"
-        "OwnerKey" = "8:_EF0A8F189C634FCAB42E776033009F46"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -89,24 +71,6 @@
         {
         "MsmKey" = "8:_EF0A8F189C634FCAB42E776033009F46"
         "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_A9F97813CD368F08287382440AD76C14"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_D736203A03D2426CBBC4319E30499FDA"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_EF0A8F189C634FCAB42E776033009F46"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -204,26 +168,6 @@
         }
         "File"
         {
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_249757F7A65C499A985604217CA48C48"
-            {
-            "SourcePath" = "8:..\\TODO.md"
-            "TargetName" = "8:TODO.md"
-            "Tag" = "8:"
-            "Folder" = "8:_FEBF9128443347B8A1F31754E81E432F"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2D94956244E84B5AA4038AAFB15B6F39"
             {
             "SourcePath" = "8:..\\fix-privacy-db\\FixprivServiceRules.xml"
@@ -324,52 +268,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9B92CDEABEEE42B9BF6BBC7BC6F64255"
-            {
-            "SourcePath" = "8:..\\README.md"
-            "TargetName" = "8:README.md"
-            "Tag" = "8:"
-            "Folder" = "8:_FEBF9128443347B8A1F31754E81E432F"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_A9F97813CD368F08287382440AD76C14"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:fix-privacy-db, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                }
-            "SourcePath" = "8:fix-privacy-db.DLL"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_FEBF9128443347B8A1F31754E81E432F"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CDC7ABE2E6F04A448DD5C76D6FF7FB84"
             {
             "SourcePath" = "8:..\\LICENSE.txt"
@@ -397,11 +295,6 @@
             "AssemblyAsmDisplayName" = "8:fix-privacy-cons, Version=1.0.1.5, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_D736203A03D2426CBBC4319E30499FDA"
-                    {
-                    "Name" = "8:fix-privacy-cons.exe"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:..\\x64\\Release\\fix-privacy-cons.exe"
             "TargetName" = "8:"
@@ -428,11 +321,6 @@
             "AssemblyAsmDisplayName" = "8:fix-privacy-gui, Version=1.0.1.5, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_EF0A8F189C634FCAB42E776033009F46"
-                    {
-                    "Name" = "8:fix-privacy-gui.exe"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:..\\x64\\Release\\app.publish\\fix-privacy-gui.exe"
             "TargetName" = "8:"
@@ -519,15 +407,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:fix-windows-privacy"
-        "ProductCode" = "8:{51F02595-73BF-45AD-8CA7-396F96913033}"
-        "PackageCode" = "8:{26300520-4EE4-4DF3-8B29-4965ED07BDB0}"
+        "ProductCode" = "8:{147424EA-1282-4EFD-9B7A-66E5416F6C3C}"
+        "PackageCode" = "8:{B2A76779-51BA-495F-A820-D5B3677867EB}"
         "UpgradeCode" = "8:{1FEB1A8E-B783-4DAA-82AF-8B9CD157542B}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:1.0.7"
+        "ProductVersion" = "8:1.0.8"
         "Manufacturer" = "8:modzero"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:http://www.modzero.ch/software/fixwin10priv"
@@ -1012,6 +900,20 @@
         }
         "MergeModule"
         {
+            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_48217238DCCB47998BE76B964B96834C"
+            {
+            "UseDynamicProperties" = "11:TRUE"
+            "IsDependency" = "11:FALSE"
+            "SourcePath" = "8:C:\\Program Files (x86)\\Common Files\\Merge Modules\\Microsoft_VC140_CRT_x64.msm"
+                "Properties"
+                {
+                }
+            "LanguageId" = "3:0"
+            "Exclude" = "11:FALSE"
+            "Folder" = "8:"
+            "Feature" = "8:"
+            "IsolateTo" = "8:"
+            }
         }
         "ProjectOutput"
         {
