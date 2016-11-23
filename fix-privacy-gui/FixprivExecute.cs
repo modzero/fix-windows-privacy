@@ -102,6 +102,14 @@ namespace fix_privacy_gui
         FIXPRIV_RED
     };
 
+    enum fixpriv_backupstatus_t
+    {
+        READREG_SUCCESS,
+        READREG_NOTFOUND,
+        READREG_DISABLED,
+        READREG_FAIL
+    };
+
     // m0_privpol_t *
     [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Unicode)]
     struct fixpriv_privpol_t
@@ -172,6 +180,9 @@ namespace fix_privacy_gui
         [DllImport("fix-privacy-dll.dll", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         public static extern UInt32 fixpriv_svc_modify(fixpriv_privsvc_t pol);
 
+        [DllImport("fix-privacy-dll.dll", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
+        public static extern UInt32 fixpriv_svc_read(ref fixpriv_privsvc_t pol);
+
         [DllImport("fix-privacy-dll.dll", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         public static extern UInt32 fixpriv_modify_policy(fixpriv_privpol_t privpol);
 
@@ -181,6 +192,9 @@ namespace fix_privacy_gui
         // fixpriv_status_t fixpriv_check_regkey(m0_privpol_t privpol)
         [DllImport("fix-privacy-dll.dll", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         public static extern fixpriv_status_t fixpriv_check_regkey(fixpriv_privpol_t privpol);
+
+        [DllImport("fix-privacy-dll.dll", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
+        public unsafe static extern UInt32 fixpriv_read_regkey(ref fixpriv_privpol_t privpol);
 
         [DllImport("fix-privacy-dll.dll", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         public static extern fixpriv_status_t fixpriv_svc_check(fixpriv_privsvc_t privpol);
@@ -212,6 +226,8 @@ namespace fix_privacy_gui
         FpeOnProgressUpdate progress_update;
         FpeOnResultUpdate result_update;
 
+        FixprivBackup backup;
+
         public void set_status_handler(FpeOnStatusUpdate h) {
             this.status_update = h;
         }
@@ -229,34 +245,60 @@ namespace fix_privacy_gui
         public FixprivExecute(FixprivResultList r, Boolean check_only)
         {
             this.result = new List<fixpriv_result_t>();
+            this.backup = new FixprivBackup();
+
             resultview = r;
 
             this.exec_check_only = check_only;
             check_result = fixpriv_status_t.FIXPRIV_NEUTRAL;
         }
 
+
         public void go()
         {
             fixpriv_privpol_t pi_pol;
+            fixpriv_privpol_t backup_pi_pol;
             fixpriv_result_t s = new fixpriv_result_t();
+            //FixprivBackup backup  = new FixprivBackup();
+            FixprivPolicies bpol = new FixprivPolicies();
+            fixpriv_backupstatus_t backupStatus;
+
+            if (this.exec_check_only == false)
+                fixpriv_special_modify();
 
             foreach (FixprivPolicy pol in this.fpol.rules)
             {
+                FixprivPolicy backup_pol = new FixprivPolicy();
+
                 pi_pol = new fixpriv_privpol_t();
+                backup_pi_pol = new fixpriv_privpol_t();
 
                 if (pol.key.keyRoot.Equals("HKCU"))
+                {
                     pi_pol.section_key = ws_key_t.WS_KEY_HKCU;
+                }
                 else if (pol.key.keyRoot.Equals("HKLM"))
+                {
                     pi_pol.section_key = ws_key_t.WS_KEY_HKLM;
+                }
                 else if (pol.key.keyRoot.Equals("GPOU"))
+                {
                     pi_pol.section_key = ws_key_t.WS_KEY_GPOU;
+                }
                 else if (pol.key.keyRoot.Equals("GPOM"))
                 {
                     pi_pol.section_key = ws_key_t.WS_KEY_GPOM;
                 }
 
-                pi_pol.pol_key = pol.key.keyName;
+                backup_pol.key.keyRoot = pol.key.keyRoot;
+                backup_pi_pol.section_key = pi_pol.section_key;
+
+                pi_pol.pol_key        = pol.key.keyName;
                 pi_pol.pol_value_name = pol.key.keyValue.valueName;
+
+                backup_pi_pol.pol_key        = pol.key.keyName;
+                backup_pi_pol.pol_value_name = pol.key.keyValue.valueName;
+                backup_pol.key.keyName            = pol.key.keyName;
 
                 if (pol.key.keyValue.valueType.Equals("REG_DWORD"))
                 {
@@ -291,6 +333,14 @@ namespace fix_privacy_gui
                     pi_pol.pol_mode = m0_polregmode_t.POL_DISABLED;
                 }
 
+                backup_pi_pol.pol_datatype = pi_pol.pol_datatype;
+                backup_pi_pol.pol_mode     = pi_pol.pol_mode;
+
+                backup_pol.key.keyValue.valueType = pol.key.keyValue.valueType;
+                backup_pol.id = pol.id;
+                backup_pol.key.keyValue.valueDescription = pol.key.keyValue.valueDescription;
+
+                
                 if (this.exec_check_only == true)
                 {
                     check_result = fixpriv_check_regkey(pi_pol);
@@ -298,7 +348,7 @@ namespace fix_privacy_gui
                     s = new fixpriv_result_t();
                     s.state = check_result;
                     s.policy = pi_pol;
-                    s.tooltip = pol.key.keyValue.valueDescription; //  "XXX reg tooltip";
+                    s.tooltip = pol.key.keyValue.valueDescription; 
 
                     returnValueQueue.Enqueue(s);
                     signalQueue.Set();
@@ -306,7 +356,37 @@ namespace fix_privacy_gui
                 }
                 else
                 {
-                    fixpriv_special_modify();
+
+                    // backup functions
+
+                    backupStatus = (fixpriv_backupstatus_t)fixpriv_read_regkey(ref backup_pi_pol);
+
+                    backup_pol.key.keyValue.valueName = backup_pi_pol.pol_value_name;
+                    backup_pol.key.keyValue.valueData = backup_pi_pol.pol_value_data;
+
+                    if (backupStatus == fixpriv_backupstatus_t.READREG_SUCCESS)
+                    {
+                        backup_pol.key.keyValue.valueMode = "POL_ENABLED";
+                        backup_pol.key.keyValue.valueData = backup_pi_pol.pol_value_data;
+
+                    }
+                    else if (backupStatus == fixpriv_backupstatus_t.READREG_NOTFOUND)
+                    {
+                        backup_pol.key.keyValue.valueMode = "POL_DELETE";
+                        backup_pol.key.keyValue.valueType = "REG_DELETE";
+                        backup_pol.key.keyValue.valueData = "0";
+                    }
+                    else // fail
+                    {
+                        backup_pol.key.keyValue.valueType = "REG_DELETE";
+                        backup_pol.key.keyValue.valueMode = "POL_NOTCONFIGURED";
+                        backup_pol.key.keyValue.valueData = "0";
+                    }
+
+                    bpol.rules.Add(backup_pol);
+
+                    // backup functions
+
                     fixpriv_modify_policy(pi_pol);
 
                     if (pi_pol.section_key == ws_key_t.WS_KEY_GPOM)
@@ -324,6 +404,10 @@ namespace fix_privacy_gui
                     Thread.Sleep(5);
                 }
             } // foreach
+
+            if (false == this.exec_check_only)
+                this.backup.store(bpol);
+
             this.shouldRun = false;
         } // go()
 
@@ -336,7 +420,7 @@ namespace fix_privacy_gui
         public void start(Boolean read_only)
         {
             FileStream fs;
-            String dllpath = "C:\\Users\\ths\\Dev\\mod0-winX-priv\\fix-privacy\\x64\\Release;."; // XXX
+            String dllpath = ".";
             Environment.SetEnvironmentVariable("PATH", Environment.GetEnvironmentVariable("PATH") + ";" + dllpath);
             List<string> cpath = new List<string>(Application.ExecutablePath.Split('\\'));
             cpath.RemoveRange(cpath.Count() - 1, 1);
@@ -350,10 +434,12 @@ namespace fix_privacy_gui
 
             FixprivPolicies fpol = new FixprivPolicies();
             FixprivServices fsvc = new FixprivServices();
+
+            
+            FixprivServices bsvc = new FixprivServices();
+
             XmlSerializer sp = new XmlSerializer(typeof(FixprivPolicies));
             XmlSerializer ss = new XmlSerializer(typeof(FixprivServices));
-
-            //fixpriv_elevate();
 
             try
             {
@@ -399,10 +485,20 @@ namespace fix_privacy_gui
                 {
                     fixpriv_status_t result;
                     fixpriv_privsvc_t pi_svc = new fixpriv_privsvc_t();
+                    fixpriv_privsvc_t backup_pi_svc = new fixpriv_privsvc_t();
+                    FixprivService backup_svc = new FixprivService();
 
-                    pi_svc.service_name = svc.name;
-                    pi_svc.service_path = svc.servicePath;
-                    pi_svc.service_params = svc.serviceParams;
+                    pi_svc.service_name = backup_svc.name = svc.name;
+                    pi_svc.service_path = backup_svc.servicePath = svc.servicePath;
+                    pi_svc.service_params = backup_svc.serviceParams = svc.serviceParams;
+
+                    backup_pi_svc.service_name = svc.name;
+                    backup_pi_svc.service_path = svc.servicePath;
+                    backup_pi_svc.service_params = svc.serviceParams;
+
+                    backup_svc.serviceState = "WS_STATUS_UNCHANGED";
+                    backup_svc.serviceDescription = svc.serviceDescription;
+                    backup_svc.id = svc.id;
 
                     if (svc.serviceCommand.Equals("WS_STARTUP_AUTOMATIC_DELAYED"))
                         pi_svc.service_startup = ws_startup_t.WS_STARTUP_AUTOMATIC_DELAYED;
@@ -428,6 +524,32 @@ namespace fix_privacy_gui
                     else
                         pi_svc.service_status = ws_status_t.WS_STATUS_UNCHANGED;
 
+                    fixpriv_svc_read(ref backup_pi_svc);
+
+                    switch (backup_pi_svc.service_startup) {
+                        case ws_startup_t.WS_STARTUP_AUTOMATIC_DELAYED:
+                            backup_svc.serviceCommand = "WS_STARTUP_AUTOMATIC_DELAYED";
+                            break;
+                        case ws_startup_t.WS_STARTUP_AUTOMATIC:
+                            backup_svc.serviceCommand = "WS_STARTUP_AUTOMATIC";
+                            break;
+                        case ws_startup_t.WS_STARTUP_MANUAL:
+                            backup_svc.serviceCommand = "WS_STARTUP_MANUAL";
+                            break;
+                        case ws_startup_t.WS_STARTUP_DISABLED:
+                            backup_svc.serviceCommand = "WS_STARTUP_DISABLED";
+                            break;
+                        case ws_startup_t.WS_STARTUP_DELETE:
+                            backup_svc.serviceCommand = "WS_STARTUP_DELETE";
+                            break;
+                        case ws_startup_t.WS_STARTUP_UNCHANGED:
+                        default:
+                            backup_svc.serviceCommand = "WS_STARTUP_UNCHANGED";
+                            break;
+                    }
+
+                    bsvc.rules.Add(backup_svc);
+
                     if (false == this.exec_check_only)
                     {
                         fixpriv_svc_modify(pi_svc);
@@ -449,7 +571,10 @@ namespace fix_privacy_gui
                         });
 
                     this.status_update(pi_svc.service_name);
-                }
+                } // foreach svc
+
+                if (false == this.exec_check_only)
+                    this.backup.store(bsvc);
             }
             catch (Exception e)
             {

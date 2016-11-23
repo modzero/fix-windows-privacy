@@ -148,10 +148,10 @@
       <key keyRoot="HKCU" keyName="SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Search">
        <keyValue>
          <valueName>CortanaMUID</valueName>
-          <valueType>REG_SZ</valueType>
+          <valueType>REG_DELETE</valueType>
           <valueMode>POL_DELETE</valueMode>
           <valueDescription>CortanaMUID</valueDescription>
-          <valueData>MUID=bc6c9f905afb4a01a748197238147f73</valueData>
+          <valueData>0</valueData>
         </keyValue>
       </key>
     </FixprivPolicy>

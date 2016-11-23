@@ -61,9 +61,16 @@ namespace fix_privacy
 
     public class FixprivPolicy
     {
+
         [XmlAttribute]
         public UInt32 id;
         public FixprivKey key;
+
+        public FixprivPolicy()
+        {
+            this.key = new FixprivKey();
+        }
+
     }
 
     public class FixprivKey
@@ -73,6 +80,12 @@ namespace fix_privacy
         [XmlAttribute]
         public string keyName;
         public FixprivKeyvalue keyValue;
+
+
+        public FixprivKey()
+        {
+            this.keyValue = new FixprivKeyvalue();
+        }
 
     }
 

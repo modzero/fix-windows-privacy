@@ -49,6 +49,8 @@
 
 #include "m0gpo.h"
 
+// TODO - add xml description of special rules with parameters passed to SystemSettingsAdminFlows.exe
+// TODO - add restore-backup function
 
 extern DWORD status_count;
 
@@ -70,7 +72,7 @@ HRESULT m0_special_modify(void) {
 	// 3. let apps on my other devices open apps [...]
 	// call "C:\Windows\system32\SystemSettingsAdminFlows.exe" DisableCDPUserAuthPolicy
 
-	printf("[%04d] Processing SPECIAL/CDP User Auth Policy\n", status_count++);
+	printf("[%04d] Processing SPECIAL/CDP User Auth Policy (SmartGlass\\UserAuthPolicy)\n", status_count++);
 	hr = m0_special_launchprogram(_wcsdup(L"C:\\Windows\\system32\\SystemSettingsAdminFlows.exe DisableCDPUserAuthPolicy"));
 
 	return hr;
@@ -88,10 +90,6 @@ HRESULT m0_special_launchprogram(wchar_t *cmdline) {
 	ZeroMemory(&si, sizeof(si));
 	si.cb = sizeof(si);
 	ZeroMemory(&pi, sizeof(pi));
-
-	wchar_t exename[] = L"c:\\Windows\\system32\\SystemSettingsAdminFlows.exe";
-
-	//printf("[+] Executing cmdline %S\n", cmdline);
 
 	cp = CreateProcessW(
 		NULL,

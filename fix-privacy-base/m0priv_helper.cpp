@@ -45,6 +45,9 @@
 
 #include "windows.h"
 #include "Strsafe.h"
+#include "Intsafe.h"
+#include "Shlobj.h"
+#include "Shlwapi.h"
 #include "gpedit.h"
 
 #include "m0gpo.h"
@@ -63,6 +66,40 @@ void m0priv_errormsg(m0_privpol_t privpol, WCHAR *function, LSTATUS rStatus, BOO
 		MAKELANGID(LANG_NEUTRAL, SUBLANG_DEFAULT), errmsg, sizeof(errmsg) / sizeof(WCHAR), NULL);
 
 	printf("[#] [%d] %S %S failed: [%08x] %S\n", (privpol.section_key), privpol.pol_key, function, rStatus, errmsg);
+	return;
+}
+
+void trace_log(wchar_t* buf) {
+	HANDLE f = NULL;
+	PWSTR datapath = NULL;
+
+	return; // do not trace anything right now
+
+	DWORD buflen = ((DWORD)wcslen(buf) * sizeof(wchar_t));
+	DWORD written = 0;
+
+	if (SUCCEEDED(SHGetKnownFolderPath(FOLDERID_LocalAppData, 0, NULL, &datapath)))
+	{
+		StringCchCatW(datapath, MAX_PATH, L"\\modzero\\fix-windows-privacy\\logs");
+		StringCchCatW(datapath, MAX_PATH, L"\\debuglog.txt");
+	}
+
+	f = CreateFileW(datapath, FILE_APPEND_DATA, 0, NULL, OPEN_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
+	if (f == INVALID_HANDLE_VALUE)
+	{
+		return;
+	}
+
+	WriteFile(
+		f,
+		buf,
+		buflen,
+		&written,
+		NULL);
+
+	CloseHandle(f);
+	free(datapath);
+
 	return;
 }
 

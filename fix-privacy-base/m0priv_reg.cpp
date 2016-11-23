@@ -41,15 +41,128 @@
 *
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-//#include "stdafx.h"
-
 #include "windows.h"
 #include "Strsafe.h"
+#include "Intsafe.h"
+#include "Shlobj.h"
+#include "Shlwapi.h"
 #include "gpedit.h"
-
 #include "m0gpo.h"
 
 extern DWORD status_count;
+
+DWORD read_regkey(m0_privpol_t *privpol)
+{
+	DWORD ret = READREG_SUCCESS;
+	DWORD dwType = 0;
+	DWORD cbType = sizeof(DWORD);
+	DWORD dwResult = 0;
+	HRESULT rStatus = S_FALSE;
+	WCHAR tmpbuf[sizeof(m0_privpol_t)] = { 0 };
+	DWORD tmpdw = 0;
+
+	HKEY root_key = HKEY_CURRENT_USER, setting_key = 0;
+
+	if (privpol == NULL)
+		return -1;
+
+	switch (privpol->section_key) {
+	case WS_KEY_HKCU:
+		root_key = HKEY_CURRENT_USER;
+		break;
+	case WS_KEY_HKLM:
+		root_key = HKEY_LOCAL_MACHINE;
+		break;
+	case WS_KEY_GPOM:
+		root_key = HKEY_LOCAL_MACHINE;
+		break;
+	case WS_KEY_GPOU:
+		root_key = HKEY_CURRENT_USER;
+		break;
+	default:
+		printf("[u] privpol.section_key\n");
+		return READREG_FAIL;
+	}
+
+	rStatus = RegOpenKeyEx(root_key, privpol->pol_key, 0, KEY_READ, &setting_key);
+
+	if (rStatus != ERROR_SUCCESS)
+	{
+		ret = READREG_FAIL;
+
+		if (rStatus == ERROR_FILE_NOT_FOUND)
+			ret = READREG_NOTFOUND;
+
+		return ret;
+	}
+
+	switch (privpol->pol_datatype) {
+
+	case	POL_DWORD:
+		dwType = REG_DWORD;
+		cbType = sizeof(DWORD);
+
+		rStatus = RegGetValue(
+			root_key,
+			privpol->pol_key,
+			privpol->pol_value_name,
+			RRF_RT_ANY,
+			&dwType,
+			(&dwResult),
+			&cbType);
+
+		if (rStatus != ERROR_SUCCESS)
+		{
+			ret = READREG_FAIL;
+			privpol->pol_value_data[0] = 0;
+			privpol->pol_mode = POL_DELETE;
+
+			if (rStatus == ERROR_FILE_NOT_FOUND) {
+				ret = READREG_NOTFOUND;
+			}
+
+			return ret;
+		}
+
+		StringCchPrintfW(privpol->pol_value_data, 256, L"%d", dwResult); 
+		ret = READREG_SUCCESS;
+
+		break;
+
+	case POL_WSTRING:
+
+		dwType = REG_SZ;
+		cbType = sizeof(tmpbuf);
+
+		rStatus = RegGetValue(root_key, privpol->pol_key, privpol->pol_value_name, RRF_RT_ANY, &dwType, (&tmpbuf), &cbType);
+
+
+		if (rStatus != ERROR_SUCCESS)
+		{
+			ret = READREG_FAIL;
+			privpol->pol_value_data[0] = 0;
+			privpol->pol_mode = POL_DELETE;
+
+			if (rStatus == ERROR_FILE_NOT_FOUND) {
+				ret = READREG_NOTFOUND;
+			}
+
+			return ret;
+		}
+
+		StringCchCopyW(privpol->pol_value_data, 256, tmpbuf);
+
+		ret = READREG_SUCCESS;
+
+		break;
+	default:
+		privpol->pol_value_data[0] = 0;
+		ret = READREG_FAIL;
+		break;
+
+	}
+	return ret;
+}
 
 fixpriv_status_t check_regkey(m0_privpol_t privpol) 
 {
@@ -87,13 +200,11 @@ fixpriv_status_t check_regkey(m0_privpol_t privpol)
 
 	if (rStatus != ERROR_SUCCESS)
 	{
-		if (privpol.pol_mode != POL_ENABLED)
-			ret = FIXPRIV_YELLOW;
-		else
-			ret = FIXPRIV_GREEN;
+		ret = FIXPRIV_RED;
 
-		if (rStatus == ERROR_FILE_NOT_FOUND && (privpol.pol_mode == POL_DELETE || privpol.pol_mode == POL_DISABLED))
+		if (rStatus == ERROR_FILE_NOT_FOUND && (privpol.pol_mode == POL_DELETE || privpol.pol_mode == POL_DISABLED)) {
 			ret = FIXPRIV_GREEN;
+		}
 
 		return ret;
 	}
@@ -117,7 +228,7 @@ fixpriv_status_t check_regkey(m0_privpol_t privpol)
 
 		if (rStatus != ERROR_SUCCESS) {
 			m0priv_errormsg(privpol, L"RegGetValue", rStatus, TRUE);
-			ret = FIXPRIV_YELLOW;
+			ret = FIXPRIV_RED;
 
 			if (rStatus == ERROR_FILE_NOT_FOUND && (privpol.pol_mode == POL_DELETE || privpol.pol_mode == POL_DISABLED))
 				ret = FIXPRIV_GREEN;
@@ -140,7 +251,7 @@ fixpriv_status_t check_regkey(m0_privpol_t privpol)
 		
 		if (rStatus != ERROR_SUCCESS) {
 			m0priv_errormsg(privpol, L"RegGetValue", rStatus, TRUE);
-			ret = FIXPRIV_YELLOW;
+			ret = FIXPRIV_RED;
 
 			if (rStatus == ERROR_FILE_NOT_FOUND && (privpol.pol_mode == POL_DELETE || privpol.pol_mode == POL_DISABLED))
 				ret = FIXPRIV_GREEN;
@@ -167,9 +278,9 @@ HRESULT modify_regkey_user(m0_privpol_t privpol)
 	HRESULT hr = S_OK;
 	DWORD tmp = 0;
 
-	//printf("[%04d] Processing %s\\%S\\%S = %S\n", 
-	//	status_count++, (privpol.section_key == WS_KEY_HKCU ? "HKCU" : "HKLM"),
-	//	privpol.pol_key, privpol.pol_value_name, privpol.pol_value_data);
+	printf("[%04d] Processing %s\\%S\\%S = %S\n", 
+		status_count++, (privpol.section_key == WS_KEY_HKCU ? "HKCU" : "HKLM"),
+		privpol.pol_key, privpol.pol_value_name, privpol.pol_value_data);
 
 	HKEY hSectionKey = 0;
 	HKEY hSettingKey = 0;
@@ -197,6 +308,7 @@ HRESULT modify_regkey_user(m0_privpol_t privpol)
 	ZeroMemory(value_name_del, sizeof(full_path_del));
 
 	StringCbPrintf(full_path, sizeof(full_path), L"%s\\%s", privpol.pol_key, privpol.pol_value_name);
+
 	StringCbPrintf(full_path_del, sizeof(full_path_del), L"%s\\**del.%s", privpol.pol_key, privpol.pol_value_name);
 	StringCbPrintf(value_name_del, sizeof(value_name_del), L"**del.%s", privpol.pol_value_name);
 
@@ -206,16 +318,23 @@ HRESULT modify_regkey_user(m0_privpol_t privpol)
 	case POL_DELETE:
 	case POL_DISABLED:
 
-		rStatus = RegDeleteValue(hSectionKey,
-			full_path
-		);
+		rStatus = RegOpenKeyEx(hSectionKey, privpol.pol_key, 0, KEY_ALL_ACCESS, &hSettingKey);
 
 		if (rStatus != ERROR_SUCCESS)
-			m0priv_errormsg(privpol, L"RegDeleteValue", rStatus, TRUE);
+		{
+			m0priv_errormsg(privpol, L"RegOpenKeyEx", rStatus, TRUE);
+		}
 
+		rStatus = RegDeleteValue(hSettingKey,
+			privpol.pol_value_name
+		);
 
-		rStatus = RegDeleteValue(hSectionKey,
-			full_path_del
+		if (rStatus != ERROR_SUCCESS) {
+			m0priv_errormsg(privpol, L"RegDeleteValue", rStatus, FALSE);
+		}
+
+		rStatus = RegDeleteValue(hSettingKey,
+			value_name_del
 		);
 
 		if (rStatus != ERROR_SUCCESS)
@@ -264,12 +383,12 @@ HRESULT modify_regkey_user(m0_privpol_t privpol)
 
 		case POL_WSTRING:
 
-			StringCbLength(privpol.pol_value_data/*.wcsVal*/, sizeof(privpol.pol_value_data/*.wcsVal*/), &len);
+			StringCbLength(privpol.pol_value_data, sizeof(privpol.pol_value_data), &len);
 
 			len += sizeof(WCHAR); // plus null bytes
 
 			rStatus = RegSetValueEx(hSettingKey, privpol.pol_value_name,
-				NULL, REG_SZ, (BYTE *)privpol.pol_value_data/*.wcsVal*/, (DWORD)len);
+				NULL, REG_SZ, (BYTE *)privpol.pol_value_data, (DWORD)len);
 
 			if (rStatus != ERROR_SUCCESS)
 				m0priv_errormsg(privpol, L"RegSetValueEx", rStatus, FALSE);

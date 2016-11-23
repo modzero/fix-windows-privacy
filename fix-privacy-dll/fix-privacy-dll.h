@@ -53,10 +53,12 @@ extern "C"
 	extern __declspec(dllexport) HRESULT fixpriv_modify_gpo_regkey_user(m0_privpol_t privpol);
 	extern __declspec(dllexport) HRESULT fixpriv_modify_gpo_regkey_machine(m0_privpol_t privpol);
 	extern __declspec(dllexport) HRESULT fixpriv_svc_modify(m0_privsvc_t privsvc);
+	extern __declspec(dllexport) DWORD	 fixpriv_svc_read(m0_privsvc_t *privsvc);
 	extern __declspec(dllexport) HRESULT fixpriv_dummy(m0_privpol_t privpol);
 	extern __declspec(dllexport) HRESULT fixpriv_modify_policy(m0_privpol_t privpol);
 	extern __declspec(dllexport) void fixpriv_elevate();
 	extern __declspec(dllexport) void fixpriv_elevate_withargs(const char *av);
 	extern __declspec(dllexport) fixpriv_status_t fixpriv_check_regkey(m0_privpol_t privpol);
+	extern __declspec(dllexport) DWORD fixpriv_read_regkey(m0_privpol_t *privpol);
 	extern __declspec(dllexport) fixpriv_status_t fixpriv_svc_check(m0_privsvc_t privsvc);
 }

@@ -78,10 +78,6 @@ HRESULT modify_gpo_regkey_machine(m0_privpol_t privpol)
 	}
 
 
-	//printf("[%04d] Processing %s\\%S\\%S\n",
-	//	status_count++, (privpol.section_key == WS_KEY_GPOM ? "GPOM" : "GPOU"),
-	//	privpol.pol_key, privpol.pol_value_name);
-
 	hr = CoCreateInstance(CLSID_GroupPolicyObject, NULL,
 		CLSCTX_INPROC_SERVER, IID_IGroupPolicyObject,
 		(LPVOID*)&pLGPO);
@@ -90,8 +86,6 @@ HRESULT modify_gpo_regkey_machine(m0_privpol_t privpol)
 	{
 		DWORD tmp = 0;
 		BOOL op_add = TRUE;
-
-		//printf("[d] CoCreateInstance() succeeded.\n");
 
 		WCHAR full_path[sizeof(m0_privpol_t) / sizeof(WCHAR)];
 		WCHAR full_path_del[sizeof(m0_privpol_t) / sizeof(WCHAR)];
@@ -120,7 +114,7 @@ HRESULT modify_gpo_regkey_machine(m0_privpol_t privpol)
 		switch (privpol.pol_mode)
 		{
 		case POL_NOTCONFIGURED:
-		case POL_DELETE:
+		
 			op_add = FALSE;
 
 			//
@@ -133,12 +127,12 @@ HRESULT modify_gpo_regkey_machine(m0_privpol_t privpol)
 			rStatus = RegDeleteValue(machine_key, full_path);
 
 			if (rStatus != ERROR_SUCCESS)
-				m0priv_errormsg(privpol, L"RegDeleteValue", rStatus, TRUE);
+				m0priv_errormsg(privpol, L"RegDeleteValue", rStatus, FALSE);
 
 			rStatus = RegDeleteValue(machine_key, full_path_del);
 
 			if (rStatus != ERROR_SUCCESS)
-				m0priv_errormsg(privpol, L"RegDeleteValue", rStatus, TRUE);
+				m0priv_errormsg(privpol, L"RegDeleteValue", rStatus, FALSE);
 
 			break;
 
@@ -152,8 +146,6 @@ HRESULT modify_gpo_regkey_machine(m0_privpol_t privpol)
 			// Check to see if the key for this policy exists. 
 			// If if it does, retrieve a handle
 			// If not, create it.
-
-			//printf("[+] modify_gpo_regkey_machine() - open registry key %S\n", privpol.pol_key);
 
 			rStatus = RegOpenKeyEx(machine_key, privpol.pol_key, 0, KEY_WRITE | KEY_WOW64_64KEY, &setting_key);
 
@@ -218,6 +210,7 @@ HRESULT modify_gpo_regkey_machine(m0_privpol_t privpol)
 			break;
 
 		case POL_DISABLED:
+		case POL_DELETE:
 
 			//
 			// Disable the policy.
@@ -391,8 +384,6 @@ HRESULT modify_gpo_regkey_user(m0_privpol_t privpol)
 	// Create an instance of the IGroupPolicyObject class
 	CoInitializeEx(NULL, COINIT_APARTMENTTHREADED);
 
-	//printf("[%04d] Processing %s\n", status_count++, (privpol.section_key == WS_KEY_GPOM ? "GPOM" : "GPOU"));
-
 	hr = CoCreateInstance(CLSID_GroupPolicyObject, NULL,
 		CLSCTX_INPROC_SERVER, IID_IGroupPolicyObject,
 		(LPVOID*)&pLGPO);
@@ -420,7 +411,7 @@ HRESULT modify_gpo_regkey_user(m0_privpol_t privpol)
 		switch (privpol.pol_mode)
 		{
 		case POL_NOTCONFIGURED:
-		case POL_DELETE:
+		
 			op_add = FALSE;
 
 			//
@@ -452,8 +443,6 @@ HRESULT modify_gpo_regkey_user(m0_privpol_t privpol)
 			// Check to see if the key for this policy exists. 
 			// If if it does, retrieve a handle
 			// If not, create it.
-
-			//printf("[+] modify_gpo_regkey_user() - open registry key %S\n", privpol.pol_key);
 
 			rStatus = RegOpenKeyEx(machine_key, privpol.pol_key, 0, KEY_WRITE | KEY_WOW64_64KEY, &setting_key);
 
@@ -517,7 +506,7 @@ HRESULT modify_gpo_regkey_user(m0_privpol_t privpol)
 			break;
 
 		case POL_DISABLED:
-
+		case POL_DELETE:
 			//
 			// Disable the policy.
 			// must remove the <name> value and add the

@@ -54,31 +54,11 @@ static SC_HANDLE schService;
 
 extern DWORD status_count;
 
-// // fixpriv_status_t check_regkey(m0_privpol_t privpol) 
-
 fixpriv_status_t m0_svc_check(m0_privsvc_t privsvc)
 {
 	fixpriv_status_t ret = FIXPRIV_RED;
 
 	DWORD svc_startuptype = 0xffffffff;
-
-
-	//printf("[+] Checking SVC %S\n", privsvc.service_name);
-	/*
-	#define SERVICE_BOOT_START             0x00000000   -- 
-	#define SERVICE_SYSTEM_START           0x00000001
-	#define SERVICE_AUTO_START             0x00000002
-	#define SERVICE_DEMAND_START           0x00000003
-	#define SERVICE_DISABLED               0x00000004 
-
-	WS_STARTUP_UNCHANGED,				0
-	WS_STARTUP_AUTOMATIC_DELAYED,		1
-	WS_STARTUP_AUTOMATIC,				2
-	WS_STARTUP_MANUAL,					3		
-	WS_STARTUP_DISABLED,				4		(accept 4)
-	WS_STARTUP_DELETE					5		(accept 4)
-
-	*/
 
 	svc_startuptype = DoQuerySvc(privsvc.service_name);
 
@@ -98,11 +78,21 @@ fixpriv_status_t m0_svc_check(m0_privsvc_t privsvc)
 	
 }
 
+
+DWORD m0_svc_read(m0_privsvc_t *privsvc)
+{
+	DWORD ret = READSVC_SUCCESS;
+	privsvc->service_status  = WS_STATUS_UNCHANGED;
+	privsvc->service_startup = (ws_startup_t) DoQuerySvc(privsvc->service_name);
+	if (privsvc->service_startup == -2)
+		ret = READSVC_FAIL;
+
+	return ret;
+}
+
 HRESULT m0_svc_modify(m0_privsvc_t privsvc)
 {
 	HRESULT hr = S_OK;
-
-	//printf("[%04d] Processing SVC %S\n", status_count++, privsvc.service_name);
 
 	switch (privsvc.service_status) {
 	case WS_STATUS_STOP:

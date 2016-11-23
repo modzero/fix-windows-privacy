@@ -102,10 +102,25 @@ typedef enum _fixpriv_status {
 	FIXPRIV_RED
 } fixpriv_status_t;
 
+enum {
+	READREG_SUCCESS,
+	READREG_NOTFOUND,
+	READREG_DISABLED,
+	READREG_FAIL
+};
+
+enum {
+	READSVC_SUCCESS,
+	READSVC_NOTFOUND,
+	READSVC_DISABLED,
+	READSVC_FAIL
+};
+
+
 typedef struct _m0_priv_policy {
 	WCHAR pol_key[256];
 	WCHAR pol_value_name[64];
-	WCHAR pol_value_data[256]; // XXX CHANGED from regval_t to WCHAR
+	WCHAR pol_value_data[256];
 	value_data_type_t pol_datatype;
 	m0_polregmode_t pol_mode;
 	ws_key_t section_key;
@@ -123,12 +138,15 @@ typedef struct _m0_privsvc {
 HRESULT modify_policy(m0_privpol_t privpol);
 HRESULT modify_regkey_user(m0_privpol_t privpol);
 fixpriv_status_t check_regkey(m0_privpol_t privpol);
+DWORD read_regkey(m0_privpol_t *privpol);
 
 HRESULT modify_gpo_regkey_user(m0_privpol_t privpol);
 HRESULT modify_gpo_regkey_machine(m0_privpol_t privpol);
 
 HRESULT				m0_svc_modify(m0_privsvc_t privsvc);
 fixpriv_status_t	m0_svc_check(m0_privsvc_t privsvc);
+DWORD m0_svc_read(m0_privsvc_t *privsvc);
+
 
 void m0priv_errormsg(m0_privpol_t privpol, WCHAR *function, LSTATUS rStatus, BOOL ignore_filenotfound);
 
@@ -151,3 +169,5 @@ HRESULT m0_special_launchprogram(LPWSTR);
 
 void elevate(void);
 void elevate_withargs(const char *as);
+
+void trace_log(wchar_t* buf);

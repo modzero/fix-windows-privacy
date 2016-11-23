@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FixprivBackup.cs" />
     <Compile Include="FixprivPolicyClass.cs" />
     <Compile Include="FixprivServiceClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

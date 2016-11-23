@@ -6,7 +6,7 @@
 
     <FixprivService id="1" name="dmwappushservice" >
       <serviceDescription>WAP Push Message Routing Service: Part of Microsoft Diagnostic and Telemetry service</serviceDescription>
-      <serviceCommand>WS_STARTUP_DELETE</serviceCommand>
+      <serviceCommand>WS_STARTUP_DISABLED</serviceCommand>
       <serviceState>WS_STATUS_STOP</serviceState>
       <servicePath></servicePath>
       <serviceParams></serviceParams>
@@ -16,7 +16,7 @@
 
     <FixprivService id="4" name="DiagTrack" >
       <serviceDescription>Part of Microsoft Diagnostic and Telemetry service</serviceDescription>
-      <serviceCommand>WS_STARTUP_DELETE</serviceCommand>
+      <serviceCommand>WS_STARTUP_DISABLED</serviceCommand>
       <serviceState>WS_STATUS_STOP</serviceState>
       <servicePath></servicePath>
       <serviceParams></serviceParams>

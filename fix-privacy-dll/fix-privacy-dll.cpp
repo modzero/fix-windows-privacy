@@ -53,6 +53,9 @@
 #include "gpo_init_services.h"
 #include "fix-privacy-dll.h"
 
+
+void trace_log(wchar_t* buf);
+
 extern "C"
 {
 	extern HRESULT fixpriv_special_modify(void)
@@ -65,6 +68,12 @@ extern "C"
 		return modify_regkey_user(privpol);
 	}
 
+	extern DWORD fixpriv_read_regkey(m0_privpol_t *privpol)
+	{
+		DWORD res = read_regkey(privpol);
+		return res;
+	}
+
 	extern fixpriv_status_t fixpriv_check_regkey(m0_privpol_t privpol)
 	{
 		if ((DWORD)privpol.section_key == WS_KEY_HKCU)
@@ -75,7 +84,6 @@ extern "C"
 			return check_regkey(privpol);
 		else
 			return FIXPRIV_NEUTRAL; 
-		
 	}
 
 	extern HRESULT fixpriv_modify_gpo_regkey_user(m0_privpol_t privpol)
@@ -91,6 +99,11 @@ extern "C"
 	extern HRESULT fixpriv_svc_modify(m0_privsvc_t privsvc)
 	{
 		return m0_svc_modify(privsvc);
+	}
+
+	extern DWORD fixpriv_svc_read(m0_privsvc_t *privsvc)
+	{
+		return m0_svc_read(privsvc);
 	}
 
 	extern fixpriv_status_t fixpriv_svc_check(m0_privsvc_t privsvc)
