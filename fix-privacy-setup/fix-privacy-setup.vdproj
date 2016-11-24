@@ -82,13 +82,13 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_317A116482C989F3BFE0AE25B48584F8"
+        "OwnerKey" = "8:_D736203A03D2426CBBC4319E30499FDA"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_D736203A03D2426CBBC4319E30499FDA"
+        "OwnerKey" = "8:_317A116482C989F3BFE0AE25B48584F8"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -341,7 +341,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:fix-privacy-cons, Version=1.0.1.6, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:fix-privacy-cons, Version=1.1.1.2, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
                     "_D736203A03D2426CBBC4319E30499FDA"
@@ -372,9 +372,14 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:fix-privacy-gui, Version=1.0.1.6, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:fix-privacy-gui, Version=1.1.1.1, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_EF0A8F189C634FCAB42E776033009F46"
+                    {
+                    "Name" = "8:fix-privacy-gui.exe"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:..\\x64\\Release\\app.publish\\fix-privacy-gui.exe"
             "TargetName" = "8:"
@@ -461,15 +466,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:fix-windows-privacy"
-        "ProductCode" = "8:{FA73058B-86FF-447D-B84A-932424A23D3F}"
-        "PackageCode" = "8:{2BE3AA5A-E7DE-4783-B407-37DF02879631}"
+        "ProductCode" = "8:{12EFCB16-B695-429A-885F-6B71B8C77297}"
+        "PackageCode" = "8:{3C97DDFE-68B0-4C0E-899D-3C00D8026988}"
         "UpgradeCode" = "8:{1FEB1A8E-B783-4DAA-82AF-8B9CD157542B}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:1.1.0"
+        "ProductVersion" = "8:1.1.2"
         "Manufacturer" = "8:modzero"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:http://www.modzero.ch/software/fixwin10priv"

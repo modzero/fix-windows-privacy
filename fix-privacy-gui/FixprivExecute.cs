@@ -155,28 +155,23 @@ namespace fix_privacy_gui
 
     class FixprivExecute : Form
     {
-        static string pol_xmlfile; //= Application.ExecutablePath + "\\FixprivPolicyRules.xml";
-        static string svc_xmlfile; // = Application.ExecutablePath  + "\\FixprivServiceRules.xml";
+        static string pol_xmlfile;
+        static string svc_xmlfile;
 
         List<fixpriv_result_t> result;
 
-        //extern HRESULT fixpriv_special_modify(void)
         [DllImport("fix-privacy-dll.dll", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         public static extern UInt32 fixpriv_special_modify();
 
-        //extern HRESULT fixpriv_modify_regkey_user(m0_privpol_t privpol)
         [DllImport("fix-privacy-dll.dll", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         public static extern UInt32 fixpriv_modify_regkey_user(fixpriv_privpol_t pol);
 
-        //extern HRESULT fixpriv_modify_gpo_regkey_user(m0_privpol_t privpol)
         [DllImport("fix-privacy-dll.dll", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         public static extern UInt32 fixpriv_modify_gpo_regkey_user(fixpriv_privpol_t pol);
 
-        //extern HRESULT fixpriv_modify_gpo_regkey_machine(m0_privpol_t privpol)
         [DllImport("fix-privacy-dll.dll", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         public static extern UInt32 fixpriv_modify_gpo_regkey_machine(fixpriv_privpol_t pol);
 
-        //extern HRESULT fixpriv_svc_modify(m0_privsvc_t privsvc)
         [DllImport("fix-privacy-dll.dll", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         public static extern UInt32 fixpriv_svc_modify(fixpriv_privsvc_t pol);
 
@@ -189,7 +184,6 @@ namespace fix_privacy_gui
         [DllImport("fix-privacy-dll.dll", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         public static extern void fixpriv_elevate();
 
-        // fixpriv_status_t fixpriv_check_regkey(m0_privpol_t privpol)
         [DllImport("fix-privacy-dll.dll", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         public static extern fixpriv_status_t fixpriv_check_regkey(fixpriv_privpol_t privpol);
 
@@ -361,52 +355,61 @@ namespace fix_privacy_gui
                 }
                 else
                 {
+                    try {
+                        // backup functions
 
-                    // backup functions
+                        backupStatus = (fixpriv_backupstatus_t)fixpriv_read_regkey(ref backup_pi_pol);
 
-                    backupStatus = (fixpriv_backupstatus_t)fixpriv_read_regkey(ref backup_pi_pol);
-
-                    backup_pol.key.keyValue.valueName = backup_pi_pol.pol_value_name;
-                    backup_pol.key.keyValue.valueData = backup_pi_pol.pol_value_data;
-
-                    if (backupStatus == fixpriv_backupstatus_t.READREG_SUCCESS)
-                    {
-                        backup_pol.key.keyValue.valueMode = "POL_ENABLED";
+                        backup_pol.key.keyValue.valueName = backup_pi_pol.pol_value_name;
                         backup_pol.key.keyValue.valueData = backup_pi_pol.pol_value_data;
 
+                        if (backupStatus == fixpriv_backupstatus_t.READREG_SUCCESS)
+                        {
+                            backup_pol.key.keyValue.valueMode = "POL_ENABLED";
+                            backup_pol.key.keyValue.valueData = backup_pi_pol.pol_value_data;
+
+                        }
+                        else if (backupStatus == fixpriv_backupstatus_t.READREG_NOTFOUND)
+                        {
+                            backup_pol.key.keyValue.valueMode = "POL_DELETE";
+                            backup_pol.key.keyValue.valueType = "REG_DELETE";
+                            backup_pol.key.keyValue.valueData = "0";
+                        }
+                        else // fail
+                        {
+                            backup_pol.key.keyValue.valueType = "REG_DELETE";
+                            backup_pol.key.keyValue.valueMode = "POL_NOTCONFIGURED";
+                            backup_pol.key.keyValue.valueData = "0";
+                        }
+
+                        bpol.rules.Add(backup_pol);
+
+                        // backup functions
+
+                        fixpriv_modify_policy(pi_pol);
+
+                        if (pi_pol.section_key == ws_key_t.WS_KEY_GPOM)
+                            Thread.Sleep(300); // wait for changes to sync. 500ms works
+
+                        check_result = fixpriv_check_regkey(pi_pol);
+
+                        s = new fixpriv_result_t();
+                        s.state = check_result;
+                        s.policy = pi_pol;
+                        s.tooltip = pol.key.keyValue.valueDescription;
+
+                        returnValueQueue.Enqueue(s);
+                        signalQueue.Set();
+                        Thread.Sleep(5);
                     }
-                    else if (backupStatus == fixpriv_backupstatus_t.READREG_NOTFOUND)
+                    catch (Exception e)
                     {
-                        backup_pol.key.keyValue.valueMode = "POL_DELETE";
-                        backup_pol.key.keyValue.valueType = "REG_DELETE";
-                        backup_pol.key.keyValue.valueData = "0";
+                        Debug.WriteLine("[e] error in FixprivExecute.go: " + e.Message);
+
+                        // make sure, backups are written to disk
+                        if (false == this.exec_check_only)
+                            this.backup.store(bpol);
                     }
-                    else // fail
-                    {
-                        backup_pol.key.keyValue.valueType = "REG_DELETE";
-                        backup_pol.key.keyValue.valueMode = "POL_NOTCONFIGURED";
-                        backup_pol.key.keyValue.valueData = "0";
-                    }
-
-                    bpol.rules.Add(backup_pol);
-
-                    // backup functions
-
-                    fixpriv_modify_policy(pi_pol);
-
-                    if (pi_pol.section_key == ws_key_t.WS_KEY_GPOM)
-                        Thread.Sleep(300); // wait for changes to sync. 500ms works
-
-                    check_result = fixpriv_check_regkey(pi_pol);
-
-                    s = new fixpriv_result_t();
-                    s.state = check_result;
-                    s.policy = pi_pol;
-                    s.tooltip = pol.key.keyValue.valueDescription;
-
-                    returnValueQueue.Enqueue(s);
-                    signalQueue.Set();
-                    Thread.Sleep(5);
                 }
             } // foreach
 
@@ -420,8 +423,6 @@ namespace fix_privacy_gui
         {
             this.restoremode = true;
             this.restorepath = backup_path;
-
-
         }
 
         public void start()
@@ -498,7 +499,7 @@ namespace fix_privacy_gui
                 fs = new FileStream(svc_xmlfile, FileMode.Open);
                 fsvc = (FixprivServices)ss.Deserialize(fs);
 
-                Debug.WriteLine("[*] processing {0} services", fsvc.rules.Count);
+                //Debug.WriteLine("[*] processing {0} services", fsvc.rules.Count);
 
                 foreach (FixprivService svc in fsvc.rules)
                 {
@@ -598,6 +599,8 @@ namespace fix_privacy_gui
             catch (Exception e)
             {
                 Debug.WriteLine("[e] error in main: " + e.Message);
+                if (false == this.exec_check_only)
+                    this.backup.store(bsvc);
             }
             this.status_update("Done");
         }

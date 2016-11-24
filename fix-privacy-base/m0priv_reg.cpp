@@ -278,9 +278,9 @@ HRESULT modify_regkey_user(m0_privpol_t privpol)
 	HRESULT hr = S_OK;
 	DWORD tmp = 0;
 
-	printf("[%04d] Processing %s\\%S\\%S = %S\n", 
-		status_count++, (privpol.section_key == WS_KEY_HKCU ? "HKCU" : "HKLM"),
-		privpol.pol_key, privpol.pol_value_name, privpol.pol_value_data);
+	//printf("[%04d] Processing %s\\%S\\%S = %S\n", 
+	//	status_count++, (privpol.section_key == WS_KEY_HKCU ? "HKCU" : "HKLM"),
+	//	privpol.pol_key, privpol.pol_value_name, privpol.pol_value_data);
 
 	HKEY hSectionKey = 0;
 	HKEY hSettingKey = 0;
