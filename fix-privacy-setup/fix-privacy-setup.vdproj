@@ -21,6 +21,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_317A116482C989F3BFE0AE25B48584F8"
+        "OwnerKey" = "8:_D736203A03D2426CBBC4319E30499FDA"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_373491A421D94D4A8A8A25F7D707E84B"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -71,6 +77,18 @@
         {
         "MsmKey" = "8:_EF0A8F189C634FCAB42E776033009F46"
         "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_317A116482C989F3BFE0AE25B48584F8"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_D736203A03D2426CBBC4319E30499FDA"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -188,6 +206,37 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_317A116482C989F3BFE0AE25B48584F8"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:fix-privacy-db, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_317A116482C989F3BFE0AE25B48584F8"
+                    {
+                    "Name" = "8:fix-privacy-db.DLL"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:fix-privacy-db.DLL"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_FEBF9128443347B8A1F31754E81E432F"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_373491A421D94D4A8A8A25F7D707E84B"
             {
             "SourcePath" = "8:..\\fix-privacy-graphics\\mod0-fwp.ico"
@@ -292,9 +341,14 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:fix-privacy-cons, Version=1.0.1.5, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:fix-privacy-cons, Version=1.0.1.6, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_D736203A03D2426CBBC4319E30499FDA"
+                    {
+                    "Name" = "8:fix-privacy-cons.exe"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:..\\x64\\Release\\fix-privacy-cons.exe"
             "TargetName" = "8:"
@@ -318,7 +372,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:fix-privacy-gui, Version=1.0.1.5, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:fix-privacy-gui, Version=1.0.1.6, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
                 }
@@ -407,15 +461,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:fix-windows-privacy"
-        "ProductCode" = "8:{147424EA-1282-4EFD-9B7A-66E5416F6C3C}"
-        "PackageCode" = "8:{B2A76779-51BA-495F-A820-D5B3677867EB}"
+        "ProductCode" = "8:{FA73058B-86FF-447D-B84A-932424A23D3F}"
+        "PackageCode" = "8:{2BE3AA5A-E7DE-4783-B407-37DF02879631}"
         "UpgradeCode" = "8:{1FEB1A8E-B783-4DAA-82AF-8B9CD157542B}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:1.0.8"
+        "ProductVersion" = "8:1.1.0"
         "Manufacturer" = "8:modzero"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:http://www.modzero.ch/software/fixwin10priv"

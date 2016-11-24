@@ -204,6 +204,8 @@ namespace fix_privacy_gui
         public ConcurrentQueue<fixpriv_result_t> returnValueQueue = new ConcurrentQueue<fixpriv_result_t>();
         public AutoResetEvent signalQueue = new AutoResetEvent(false);
         public Boolean shouldRun = true;
+        Boolean restoremode;
+        string restorepath;
 
         public string[] colors = {
                     "WHITE ",
@@ -250,6 +252,10 @@ namespace fix_privacy_gui
             resultview = r;
 
             this.exec_check_only = check_only;
+            this.restoremode = false;
+            this.restorepath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData)
+                    + "\\modzero\\fix-windows-privacy\\backup\\";
+
             check_result = fixpriv_status_t.FIXPRIV_NEUTRAL;
         }
 
@@ -259,7 +265,6 @@ namespace fix_privacy_gui
             fixpriv_privpol_t pi_pol;
             fixpriv_privpol_t backup_pi_pol;
             fixpriv_result_t s = new fixpriv_result_t();
-            //FixprivBackup backup  = new FixprivBackup();
             FixprivPolicies bpol = new FixprivPolicies();
             fixpriv_backupstatus_t backupStatus;
 
@@ -411,6 +416,13 @@ namespace fix_privacy_gui
             this.shouldRun = false;
         } // go()
 
+        public void restore(string backup_path)
+        {
+            this.restoremode = true;
+            this.restorepath = backup_path;
+
+
+        }
 
         public void start()
         {
@@ -429,13 +441,20 @@ namespace fix_privacy_gui
             this.exec_check_only = read_only;
             this.shouldRun = true;
 
-            pol_xmlfile = exepath + "\\FixprivPolicyRules.xml";
-            svc_xmlfile = exepath + "\\FixprivServiceRules.xml";
+            if (this.restoremode == true)
+            {
+                pol_xmlfile = this.restorepath + "\\FixprivPolicyRules.xml";
+                svc_xmlfile = this.restorepath + "\\FixprivServiceRules.xml";
+            }
+            else
+            {
+                pol_xmlfile = exepath + "\\FixprivPolicyRules.xml";
+                svc_xmlfile = exepath + "\\FixprivServiceRules.xml";
+            }
 
             FixprivPolicies fpol = new FixprivPolicies();
             FixprivServices fsvc = new FixprivServices();
 
-            
             FixprivServices bsvc = new FixprivServices();
 
             XmlSerializer sp = new XmlSerializer(typeof(FixprivPolicies));

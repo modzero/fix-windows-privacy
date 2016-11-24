@@ -41,12 +41,15 @@
             this.PolicyHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Status = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.button4 = new System.Windows.Forms.Button();
+            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.groupBox1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.button1);
@@ -160,6 +163,23 @@
             this.columnHeader1.Text = " ";
             this.columnHeader1.Width = 300;
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(430, 30);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(170, 50);
+            this.button4.TabIndex = 3;
+            this.button4.Text = "Restore Backup";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.restore_Click);
+            // 
+            // folderBrowserDialog1
+            // 
+            this.folderBrowserDialog1.Description = "fix-windows-privacy backup folder";
+            this.folderBrowserDialog1.RootFolder = System.Environment.SpecialFolder.LocalApplicationData;
+            this.folderBrowserDialog1.SelectedPath = this.backup_path;
+            this.folderBrowserDialog1.ShowNewFolderButton = false;
+            // 
             // FixWindows10Privacy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -194,6 +214,8 @@
         public System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         public System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
     }
 }
 

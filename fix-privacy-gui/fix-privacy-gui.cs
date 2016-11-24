@@ -67,8 +67,16 @@ namespace fix_privacy_gui
         Boolean run_completed = false;
         Thread t;
 
+        string backup_path;
+        string backup_restore_dir;
+
+
         public FixWindows10Privacy()
         {
+            this.backup_path = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData)
+                    + "\\modzero\\fix-windows-privacy\\backup\\";
+            this.backup_restore_dir = "";
+
             InitializeComponent();
             resultList = new FixprivResultList(listView1);
             fpe = new FixprivExecute(resultList, true);
@@ -239,6 +247,44 @@ namespace fix_privacy_gui
         private void listView1_DoubleClick(object sender, EventArgs e)
         {
             //
+        }
+
+        private void restore_Click(object sender, EventArgs e)
+        {
+            if (this.folderBrowserDialog1.ShowDialog() == DialogResult.OK)
+            {
+                this.backup_restore_dir = this.folderBrowserDialog1.SelectedPath;
+            }
+
+            string msgbox_text = "Do you want to restore the backup from "
+                + Path.GetFileName(this.backup_restore_dir) + "?";
+            string msgbox_caption = "Restore Backup?";
+
+            var result = MessageBox.Show(msgbox_text, msgbox_caption,
+                                 MessageBoxButtons.OKCancel,
+                                 MessageBoxIcon.Question);
+
+            if (result == DialogResult.OK)
+            {
+                Debug.WriteLine("Restore Backups from " + this.backup_restore_dir);
+
+                fpe.restore(this.backup_restore_dir);
+
+                if (this.run_completed == true)
+                    this.reset();
+
+                fpe.set_result_handler(set_result);
+                fpe.set_status_handler(set_status_bar);
+                fpe.set_progress_handler(set_progress_bar);
+
+                fpe.exec_check_only = false;
+
+                this.t = new Thread(new ThreadStart(fpe.start));
+                this.t.SetApartmentState(ApartmentState.STA);
+                this.t.Start();
+
+                this.run_completed = true;
+            }
         }
     }
 }

@@ -61,7 +61,7 @@ namespace fix_privacy
         public FixprivBackup() {
 
             int i = 0;
-            string dirname = DateTime.Now.ToString("yyyyMMddHHmmssfff");
+            string dirname = DateTime.Now.ToString("yyyyMMdd-HHmmss.fff");
 
             this.backup_main = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) 
                     + "\\modzero\\fix-windows-privacy\\backup";
