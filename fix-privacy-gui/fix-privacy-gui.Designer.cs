@@ -1,5 +1,14 @@
 ﻿namespace fix_privacy_gui
 {
+    class DoubleBufferedListView : System.Windows.Forms.ListView
+    {
+        public DoubleBufferedListView()
+            : base()
+        {
+            this.DoubleBuffered = true;
+        }
+    }
+
     partial class FixWindows10Privacy
     {
         /// <summary>
@@ -36,7 +45,7 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.listView1 = new DoubleBufferedListView();
             this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.PolicyHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Status = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
